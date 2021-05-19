@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="2021/05/19/%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E9%9B%86/"/>
+      <url>2021/05/19/%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E9%9B%86/</url>
+      
+        <content type="html"><![CDATA[<h1 id="高效学习必备工具集"><a href="#高效学习必备工具集" class="headerlink" title="高效学习必备工具集"></a>高效学习必备工具集</h1><pre class=" language-yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> typora<span class="token punctuation">-</span>vue<span class="token punctuation">-</span>theme主题介绍<span class="token key atrule">date</span><span class="token punctuation">:</span> <span class="token datetime number">2021-05-19 21:15:00</span><span class="token key atrule">author</span><span class="token punctuation">:</span> 邵天宇<span class="token key atrule">cover</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span class="token key atrule">toc</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span class="token key atrule">summary</span><span class="token punctuation">:</span> 大学生的学习生活少不了学习网课，如何高效完成线上课程的学习成为当代大学生必不可少的应用技能。本文就学习通、智慧树（知到）等部分线上学习网站为例，逐一进行讲解，希望对迷茫的你有所帮助<span class="token key atrule">categories</span><span class="token punctuation">:</span> 学习工具</code></pre><h3 id="线上学习网站"><a href="#线上学习网站" class="headerlink" title="线上学习网站"></a>线上学习网站</h3><p>以上网站均可在浏览器中打开</p><ol><li><a href="http://passport2.chaoxing.com/login?fid=&refer=http://i.mooc.chaoxing.com">学习通</a></li><li><a href="https://passport.zhihuishu.com/login?service=https://onlineservice.zhihuishu.com/login/gologin">智慧树在线教育_全球大型的学分课程运营服务平台（知到）</a></li><li><a href="https://www.yuketang.cn/v2/web/index">雨课堂</a></li><li>……</li><li>欢迎您的补充</li></ol><h3 id="高效学习工具分享"><a href="#高效学习工具分享" class="headerlink" title="高效学习工具分享"></a>高效学习工具分享</h3><ol><li>脚本类</li></ol><p><a href="https://www.tampermonkey.net/?ext=dhdg&locale=zh">油猴</a>：脚本管理工具（脚本：实现对页面的自动化控制）</p><p>Greasy Fork:<a href="https://greasyfork.org/zh-CN/scripts">开源用户脚本发布网站</a></p><p>用户脚本是一段代码，它们能够优化您的网页浏览体验。安装之后，有些脚本能为网站添加新的功能，有些能使网站的界面更加易用，有些则能隐藏网站上烦人的部分内容。在 Greasy Fork 上的用户脚本都是由用户编写并向全世界发表的，您可以免费安装，轻松体验。</p><p>按取所需，比如打开<a href="https://greasyfork.org/zh-CN/scripts/424383-%E8%B6%85%E6%98%9F%E5%AD%A6%E4%B9%A0%E9%80%9A%E7%BD%91%E8%AF%BE%E5%8A%A9%E6%89%8B-%E6%94%B9-%E6%94%AF%E6%8C%81%E5%9B%BE%E7%89%87%E9%A2%98">超星学习通网课助手(改)(支持图片题)</a>选择安装此脚本即可完成安装。简单阅读一下源代码部分，并对其中某些必要参数进行修改</p><p>打开对应的处理网站进行测试，成功则当前脚本有效，若无效，更换下一个直到成功执行相关功能即为完成</p><ol start="2"><li>插件类</li></ol><p>特定工具，完成特定工作</p><p><a href="https://chrome.zzzmh.cn/index#ext">极简插件</a>：一个各种集合各种插件的网站</p><p>比如视频倍速插件Video Speed Controller</p><p><a href="https://zhaoolee.com/ChromeAppHeroes/page/005_video_speed_controller.html">Video Speed Controller 刷课（刷剧）神器！给网页视频加个速(最快可达16倍!)</a></p><p>可在极简插件那个网站中浏览并获取</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>前(VUE)后端(django)框架入门</title>
       <link href="2021/05/19/%E5%89%8D%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8/"/>
       <url>2021/05/19/%E5%89%8D%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6%E5%85%A5%E9%97%A8/</url>
