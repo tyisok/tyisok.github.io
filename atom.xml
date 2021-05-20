@@ -3,11 +3,11 @@
   <title>Tyの小站</title>
   
   <subtitle>very good</subtitle>
-  <link href="https://github.com/tyisok/tyisok.github.io/atom.xml" rel="self"/>
+  <link href="https://tyisok.github.io/tyisok/atom.xml" rel="self"/>
   
-  <link href="https://github.com/tyisok/tyisok.github.io/"/>
+  <link href="https://tyisok.github.io/tyisok/"/>
   <updated>2021-05-20T05:55:28.400Z</updated>
-  <id>https://github.com/tyisok/tyisok.github.io/</id>
+  <id>https://tyisok.github.io/tyisok/</id>
   
   <author>
     <name>Tianyu Shao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>高效学习必备工具集</title>
-    <link href="https://github.com/tyisok/tyisok.github.io/2021/05/19/gao-xiao-xue-xi-bi-bei-gong-ju-ji/"/>
-    <id>https://github.com/tyisok/tyisok.github.io/2021/05/19/gao-xiao-xue-xi-bi-bei-gong-ju-ji/</id>
+    <link href="https://tyisok.github.io/tyisok/2021/05/19/gao-xiao-xue-xi-bi-bei-gong-ju-ji/"/>
+    <id>https://tyisok.github.io/tyisok/2021/05/19/gao-xiao-xue-xi-bi-bei-gong-ju-ji/</id>
     <published>2021-05-19T13:15:00.000Z</published>
     <updated>2021-05-20T05:55:28.400Z</updated>
     
@@ -35,19 +35,19 @@
     
     
     
-    <category term="学习工具" scheme="https://github.com/tyisok/tyisok.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7/"/>
+    <category term="学习工具" scheme="https://tyisok.github.io/tyisok/categories/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="Learn" scheme="https://github.com/tyisok/tyisok.github.io/tags/Learn/"/>
+    <category term="Learn" scheme="https://tyisok.github.io/tyisok/tags/Learn/"/>
     
-    <category term="Tools" scheme="https://github.com/tyisok/tyisok.github.io/tags/Tools/"/>
+    <category term="Tools" scheme="https://tyisok.github.io/tyisok/tags/Tools/"/>
     
   </entry>
   
   <entry>
     <title>前(VUE)后端(django)框架入门</title>
-    <link href="https://github.com/tyisok/tyisok.github.io/2021/05/19/qian-hou-duan-kuang-jia-ru-men/"/>
-    <id>https://github.com/tyisok/tyisok.github.io/2021/05/19/qian-hou-duan-kuang-jia-ru-men/</id>
+    <link href="https://tyisok.github.io/tyisok/2021/05/19/qian-hou-duan-kuang-jia-ru-men/"/>
+    <id>https://tyisok.github.io/tyisok/2021/05/19/qian-hou-duan-kuang-jia-ru-men/</id>
     <published>2021-05-18T17:40:00.000Z</published>
     <updated>2021-05-20T05:55:10.113Z</updated>
     
@@ -61,19 +61,19 @@
     
     
     
-    <category term="Web开发" scheme="https://github.com/tyisok/tyisok.github.io/categories/Web%E5%BC%80%E5%8F%91/"/>
+    <category term="Web开发" scheme="https://tyisok.github.io/tyisok/categories/Web%E5%BC%80%E5%8F%91/"/>
     
     
-    <category term="Django" scheme="https://github.com/tyisok/tyisok.github.io/tags/Django/"/>
+    <category term="Django" scheme="https://tyisok.github.io/tyisok/tags/Django/"/>
     
-    <category term="Vue" scheme="https://github.com/tyisok/tyisok.github.io/tags/Vue/"/>
+    <category term="Vue" scheme="https://tyisok.github.io/tyisok/tags/Vue/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://github.com/tyisok/tyisok.github.io/2021/05/18/hello-world/"/>
-    <id>https://github.com/tyisok/tyisok.github.io/2021/05/18/hello-world/</id>
+    <link href="https://tyisok.github.io/tyisok/2021/05/18/hello-world/"/>
+    <id>https://tyisok.github.io/tyisok/2021/05/18/hello-world/</id>
     <published>2021-05-18T13:59:39.272Z</published>
     <updated>2021-05-18T13:59:39.272Z</updated>
     
