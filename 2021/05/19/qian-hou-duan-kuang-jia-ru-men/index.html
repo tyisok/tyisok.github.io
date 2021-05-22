@@ -468,14 +468,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-05-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3,848
+                    3,882
                 </div>
                 
 
@@ -618,7 +618,7 @@ Quit the server with CONTROL-C.
     <span class="token keyword">def</span> <span class="token function">get</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> request<span class="token punctuation">,</span> format<span class="token operator">=</span>None<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> Response<span class="token punctuation">(</span><span class="token string">"hello world"</span><span class="token punctuation">)</span>
 </code></pre>
-<p><strong>9 配置URL路由</strong><br>  打开工程文件夹下的 <code>urls.py</code><br>  1.导入 APP中的视图模块 ，注意导入模块是默认没有展开的</p>
+<p><strong>9 配置URL路由</strong><br>  打开工程文件夹下的 <code>urls.py</code><br>  1.导入 APP中的视图模块 ，注意导入模块是默认没有展开的，<strong>粘贴时不要错把导入模块覆盖了</strong></p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> SchoolApp<span class="token punctuation">.</span>views <span class="token keyword">import</span> <span class="token operator">*</span>
 </code></pre>
 <p>  2.配置路由，本次完全覆盖此列表，之后每次新加入都是添加新的列表项</p>
@@ -836,107 +836,206 @@ vue create testapp
 </code></pre>
 <p>3-7 推荐使用Chrome浏览器<br>   输入地址 ：<a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a><br>   显示出Vue的界面证明配置成功–可以准备开发</p>
 <h3 id="二、Vue工程开发流程"><a href="#二、Vue工程开发流程" class="headerlink" title="二、Vue工程开发流程"></a>二、Vue工程开发流程</h3><p><strong>0 在合适的位置创建新文件夹Vue_stu,并使用Vscode打开此文件夹</strong></p>
-<p><strong>1 创建一个名为<em>studapp</em>工程项目</strong></p>
+<p><strong>1 初始化工程</strong></p>
+<p><strong>1-1 创建一个名为<em>studapp</em>工程项目</strong></p>
 <pre class=" language-cmd"><code class="language-cmd">vue init webpack studapp
 </code></pre>
-<p><strong>2 技术开发</strong></p>
+<p><strong>1-2 进入[项目名]文件夹</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">cd  studapp
+</code></pre>
+<p><strong>1-3 安装依赖</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">cnpm install 
+</code></pre>
+<p><strong>1-4 为项目安装网络请求axios</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">cnpm install axios --save
+</code></pre>
+<p><strong>1-5 测试</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">npm run dev
+</code></pre>
+<p><strong>2 代码开发部分</strong></p>
 <p><strong>2-1 简单理解目录</strong></p>
-<p>(1)文件结构简单介绍–src【其它的同学们多看看官方文档或其它材料】<br>(2)运行时会自动打开一个界面，是如何做到的?</p>
+<p>(1)文件结构简单介绍之<code>src</code>【其它的建议自行查阅官方文档】</p>
+<p>(2)运行项目时会自动打开一个界面，是如何做到的?</p>
 <blockquote>
 <p>main.js—&gt;App.vue—&gt;在App.vue  打几个字试试—&gt;刷新页面 </p>
 </blockquote>
-<p>【那下面的界面是哪来的？】</p>
-<p>打开 components的helloworld.vue  打几个字试试—刷新页面<br>发现helloworld里的东西是会替换到router-view 标签<br>    (3)那是如何做到的的呢？<br>    打开 index.js 发现这里面有一个routes的配置<br>       要点：要导入需要配置的组件 import<br>            添加配置项 path,name,component<br>       这样组件就会自动替换 router-view 标签</p>
-<pre><code>运行机制小结,见图《简单运行机制》
-
-(4)组件的代码文档结构  &lt;template&gt;    &lt;script&gt;    &lt;style&gt;三部分组成
+<p><code>【夹在中间的界面是哪来的？】</code></p>
+<blockquote>
+<p>打开 components（组件）的helloworld.vue  打几个字试试—刷新页面</p>
+<p>发现helloworld里的东西是会替换到router-view 标签</p>
+</blockquote>
+<p>(3)如何做到的的呢？</p>
+<p>打开 <code>router/index.js</code> 发现这里面有一个routes的配置</p>
+<blockquote>
+<p>要点：<br>1 导入需要配置的组件 import<br>2 添加配置项 path,name,component（组件）</p>
+</blockquote>
+<p>这样组件就会自动替换 router-view 标签  </p>
+<p>(4)组件的代码文档结构<br>由 &lt;template&gt;  &lt;script&gt;  &lt;style&gt; 三部分组成</p>
+<p><strong>2-2 开发一个可以显示学校信息的页面</strong></p>
+<p>2-2-1 创建组件<br>    <code>components/school.vue</code>   做出简单的修改</p>
+<pre class=" language-vue"><code class="language-vue"><template>
+    <div>school</div>
+</template>
 </code></pre>
-<p>4-2 开发一个可以显示学校信息的页面</p>
-<p>4-2-1 创建组件<br>    components/school.vue   做出简单的修改<br>    <template><br>      <div>school</div><br>    </template></p>
-<p>4-2-2 配置路由<br>    (1)index.js  中  import School from ‘@/components/school’<br>    (2)添加一个新routes<br>    {<br>      path: ‘/school’,<br>      name: ‘School’,<br>      component: School<br>    }<br>    (3) 在index.js 的routes:上面添加 mode: ‘history’,  //去掉url中的#</p>
-<pre><code>(4) 打开浏览器访问http://127.0.0.1:8080/school
-可以显示出  shool字说明成功
+<p>2-2-2 配置路由<br>(1)<code>index.js</code>  中  </p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> School <span class="token keyword">from</span> <span class="token string">'@/components/school'</span>
 </code></pre>
-<p>4-2-3 与服务端交互</p>
+<p>(2)添加一个新routes</p>
+<pre class=" language-js"><code class="language-js"><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/school'</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">'School'</span><span class="token punctuation">,</span>
+    component<span class="token punctuation">:</span> School
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+</code></pre>
+<p>(3) 在index.js 的routes:上面平行添加 </p>
+<pre class=" language-js"><code class="language-js">mode<span class="token punctuation">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//去掉url中的#</span>
+</code></pre>
+<p>(4) 打开浏览器访问<a target="_blank" rel="noopener" href="http://127.0.0.1:8080/school">http://127.0.0.1:8080/school</a><br>可以显示出  shool字说明成功</p>
+<p>2-2-3 与服务端交互</p>
 <p>(1)访问数据</p>
 <ol>
 <li><p>打开python服务器，测试之前接口[根据自己之前的路由名来测试]<br><a target="_blank" rel="noopener" href="http://127.0.0.1:8000/first">http://127.0.0.1:8000/first</a> 得到数据<br>保持服务端服务器打开状态</p>
 </li>
 <li><p>打开前端工程，在school组件中编写获取服务端数据</p>
-<script>
-import Axios from "axios";</li>
-</ol>
-<p>export default {<br>  methods: {<br>    loadSchool(){<br>      var api = “<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/first&quot;">http://127.0.0.1:8000/first&quot;</a>;<br>      Axios.get(api)<br>        .then((Response) =&gt; {<br>          console.log(Response.data);<br>          //this.schools = Response.data;<br>        })<br>        .catch((error) =&gt; {<br>          console.log(error);<br>        });<br>    }<br>  },<br>  mounted(){<br>    this.loadSchool();<br>  }<br>};<br></script></p>
-<p>   3)请求对接<br>   报错：跨域问题<br>   打开python服务端工程，添加跨域支持<br>   打开settings.py<br>    A. INSTALLED_APPS: ‘corsheaders’<br>    B. MIDDLEWARE：’corsheaders.middleware.CorsMiddleware’,<br>       必须第一项<br>    注释掉 ‘django.middleware.csrf.CsrfViewMiddleware’,<br>    C. CORS_ORIGIN_ALLOW_ALL=True  #解决跨域问题</p>
-<p>(3)解析数据<br>school.vue中</p>
-<ol>
-<li><p>export default {<br>data() {<br> return {</p>
-<pre><code>schools:[]
-</code></pre>
-<p> };<br>},<br>methods: {<br> loadSchool() {<br>   var api = “<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/first&quot;">http://127.0.0.1:8000/first&quot;</a>;<br>   Axios.get(api)</p>
-<pre><code> .then((Response) =&gt; &#123;
-   console.log(Response.data)
-   this.schools = Response.data;    //添加这个数据
- &#125;)
- .catch((error) =&gt; &#123;
-   console.log(error);
- &#125;);
-</code></pre>
-<p> },<br>},<br>mounted() {<br> this.loadSchool();<br>}<br>};<br></script></p>
-</li>
-<li><p>在template中</p>
-<template>
-<div>
- 
-</div>
-</template></li>
-<li><p>测试：可以看到数据，但是不友好<br> schools[0] …其它数据的显示演示</p>
 </li>
 </ol>
-<p>5 让页面更美观<br>  前端UI框架—cnpm install ant-design-vue –save<br>          见文档中的导入说明</p>
-<p>5-1 配置<br>在 main.js中导入下面模块<br>import Vue from ‘vue’<br>import App from ‘./App’<br>import router from ‘./router’<br>import Antd from ‘ant-design-vue’       //这里是新的<br>import ‘ant-design-vue/dist/antd.css’  //这里是新的</p>
-<p>Vue.config.productionTip = false<br>Vue.use(Antd)  //这里是新的<br>/* eslint-disable no-new */<br>new Vue({<br>  el: ‘#app’,<br>  router,<br>  components: { App },<br>  template: ‘<App/>‘<br>})</p>
-<p>5-2 添加列表标签<br>5-2-1在school.vue template中<br><template><br>  <div><br>    <div class="schoollist"><br>      <a-table :columns="columns" :data-source="schools"><br>      </a-table><br>    </div><br>  </div><br></template></p>
-<p>5-2-2在school.vue的script脚本</p>
-<script>
-import Axios from "axios";
-const columns = [
-  {
-    title: "编号",
-    dataIndex: "id",
-    key:'id'
-  },
-  {
-    title: "所在学校",
-    dataIndex: "name",
-    key:'name'
-  }
-];
-export default {
-  data() {
-    return {
-      columns,
-      schools:[]
-    };
-  },
-  methods: {
-    loadSchool() {
-      var api = "http://127.0.0.1:8000/first";
+<pre class=" language-vue"><code class="language-vue"><script>
+import Axios from 'axios'
+export default &#123;
+  methods: &#123;
+    loadSchool () &#123;
+      var api = 'http://127.0.0.1:8000/first'
       Axios.get(api)
-        .then((Response) => {
+        .then((Response) => &#123;
           console.log(Response.data)
-          this.schools = Response.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-  },
-  mounted() {
-    this.loadSchool();
-  },
-};
+        //   this.schools = Response.data
+        &#125;)
+        .catch((error) => &#123;
+          console.log(error)
+        &#125;)
+    &#125;
+  &#125;,
+  mounted () &#123;
+    this.loadSchool()
+  &#125;
+&#125;
 </script>
+</code></pre>
+<p>   3)请求对接<br>   报错：跨域问题<br>   <code>打开python服务端工程</code>，添加跨域支持<br>   打开<code>settings.py</code><br>    A. INSTALLED_APPS: ‘corsheaders’<br>    B. MIDDLEWARE：’corsheaders.middleware.CorsMiddleware’,<br>       必须第一项<br>    注释掉 ‘django.middleware.csrf.CsrfViewMiddleware’,<br>    C. CORS_ORIGIN_ALLOW_ALL=True  #解决跨域问题</p>
+<p>(2)解析数据<br>school.vue中</p>
+<pre class=" language-VUE"><code class="language-VUE"><script>
+import Axios from 'axios'
+export default &#123;
+  data () &#123;
+    return &#123;
+      schools: []
+    &#125;
+  &#125;,// 添加了一个获取数据的方法
+  methods: &#123;
+    loadSchool () &#123;
+      var api = 'http://127.0.0.1:8000/first'
+      Axios.get(api)
+        .then((Response) => &#123;
+          console.log(Response.data)
+        //   this.schools = Response.data
+        &#125;)
+        .catch((error) => &#123;
+          console.log(error)
+        &#125;)
+    &#125;
+  &#125;,
+  mounted () &#123;
+    this.loadSchool()
+  &#125;
+&#125;
+</script>
+</code></pre>
+<ol start="2">
+<li>在template中</li>
+</ol>
+<pre class=" language-VUE"><code class="language-VUE"><template>
+  <div>
+    &#123;&#123;schools&#125;&#125;
+  </div>
+</template>
+</code></pre>
+<ol start="3">
+<li>测试：可以看到数据，但是不友好<br> schools[0] …其它数据的显示演示</li>
+</ol>
+<p>3 让页面更美观<br>  前端UI框架—<code>ant-design-vue</code></p>
+<pre class=" language-cmd"><code class="language-cmd">cnpm install ant-design-vue --save
+</code></pre>
+<p>见文档中的导入说明</p>
+<p><a target="_blank" rel="noopener" href="https://www.antdv.com/docs/vue/getting-started-cn/">ant-design-vuegu官网</a></p>
+<p>3-1 配置新模块<br>在 <code>main.js</code>中导入下面模块</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span>
+<span class="token keyword">import</span> router <span class="token keyword">from</span> <span class="token string">'./router'</span>
+<span class="token keyword">import</span> Antd <span class="token keyword">from</span> <span class="token string">'ant-design-vue'</span>       <span class="token comment" spellcheck="true">//这里是新的</span>
+<span class="token keyword">import</span> <span class="token string">'ant-design-vue/dist/antd.css'</span>  <span class="token comment" spellcheck="true">//这里是新的</span>
+
+Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Antd<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">//这里是新的</span>
+<span class="token comment" spellcheck="true">/* eslint-disable no-new */</span>
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  el<span class="token punctuation">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+  router<span class="token punctuation">,</span>
+  components<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> App <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  template<span class="token punctuation">:</span> <span class="token string">'&lt;App/>'</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>5-2 添加列表标签<br>5-2-1在school.vue template中</p>
+<pre class=" language-vue"><code class="language-vue"><template>
+  <div>
+    <div class="schoollist">
+      <a-table :columns="columns" :data-source="schools">
+      </a-table>
+    </div>
+  </div>
+</template>
+</code></pre>
+<p>5-2-2在school.vue的script脚本</p>
+<pre class=" language-vue"><code class="language-vue"><script>
+import Axios from 'axios'
+const columns = [
+  &#123;
+    title: '编号',
+    dataIndex: 'id',
+    key: 'id'
+  &#125;,
+  &#123;
+    title: '所在学校',
+    dataIndex: 'name',
+    key: 'name'
+  &#125;
+]
+export default &#123;
+  data () &#123;
+    return &#123;
+      columns,
+      schools: []
+    &#125;
+  &#125;,
+  methods: &#123;
+    loadSchool () &#123;
+      var api = 'http://127.0.0.1:8000/first'
+      Axios.get(api)
+        .then((Response) => &#123;
+          console.log(Response.data)
+          this.schools = Response.data
+        &#125;)
+        .catch((error) => &#123;
+          console.log(error)
+        &#125;)
+    &#125;
+  &#125;,
+  mounted () &#123;
+    this.loadSchool()
+  &#125;
+&#125;
+</script>
+</code></pre>
+
                 
             </div>
             <hr/>
