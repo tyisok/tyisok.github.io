@@ -475,14 +475,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    667
+                    752
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -525,15 +525,27 @@ D-->8[通过各种必要的维护活动使系统持久地满足需要用户的]
 </code></pre>
 <h2 id="1-4-软件过程"><a href="#1-4-软件过程" class="headerlink" title="1.4 软件过程"></a>1.4 软件过程</h2><p><strong>基本概念：</strong>软件过程是为了获得高质量软件所需要完成的一系列任务的框架，它规定了完成各项任务的工作步骤。</p>
 <p><strong>几个模型：</strong></p>
-<p>1 瀑布模型：瀑布模型一直是唯一被广泛采用的生命周期模型，现在它仍然是软件工程中应用得最广泛的过程模型。</p>
 <pre class=" language-mermaid"><code class="language-mermaid">graph LR
-A[软件过程模型]-->1[软件定义]
-A-->2[软件开发]
-A-->3[软件维护]
-A-->4[软件维护]
-A-->5[软件维护]
+A[软件过程模型]-->1[瀑布模型]
+A-->2[快速原型模型]
+A-->3[增量模型]
+A-->4[螺旋模型]
+A-->5[喷泉模型]
+1-->Y1[优点]
+1-->Q1[缺点]
+2-->Y2[优点]
+2-->Q2[缺点]
+3-->Y3[优点]
+3-->Q3[缺点]
+4-->Y4[优点]
+4-->Q4[缺点]
+5-->Y5[优点]
+5-->Q5[缺点]
+Y1-->11[可强迫开发人员采用规范的方法]
+Y1-->12[严格地规定了每个阶段必须提交的文档]
+Y1-->13[要求每个阶段交出的所有产品都必须经过质量保证小组的仔细验证]
+Q1-->14[传统的瀑布模型过于理想化,工作过程中不可能不犯错误]
 </code></pre>
-<p>2 </p>
 
                 
             </div>
@@ -1074,7 +1086,7 @@ A-->5[软件维护]
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">5.2k</span>&nbsp;字
+                class="white-color">5.3k</span>&nbsp;字
             
             
             
