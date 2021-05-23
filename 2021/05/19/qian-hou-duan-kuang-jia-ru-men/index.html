@@ -468,21 +468,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-22
+                    2021-05-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3,882
+                    4,115
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    16 分
+                    18 分
                 </div>
                 
 
@@ -873,19 +873,19 @@ vue create testapp
 <p>(4)组件的代码文档结构<br>由 &lt;template&gt;  &lt;script&gt;  &lt;style&gt; 三部分组成</p>
 <p><strong>2-2 开发一个可以显示学校信息的页面</strong></p>
 <p>2-2-1 创建组件<br>    <code>components/school.vue</code>   做出简单的修改</p>
-<pre class=" language-vue"><code class="language-vue"><template>
-    <div>school</div>
-</template>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>school<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>2-2-2 配置路由<br>(1)<code>index.js</code>  中  </p>
 <pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> School <span class="token keyword">from</span> <span class="token string">'@/components/school'</span>
 </code></pre>
 <p>(2)添加一个新routes</p>
-<pre class=" language-js"><code class="language-js"><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    path<span class="token punctuation">:</span> <span class="token string">'/school'</span><span class="token punctuation">,</span>
-    name<span class="token punctuation">:</span> <span class="token string">'School'</span><span class="token punctuation">,</span>
-    component<span class="token punctuation">:</span> School
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<pre class=" language-html"><code class="language-html"><span class="token entity" title="&#123;">&amp;#123;</span>
+    path: '/school',
+    name: 'School',
+    component: School
+<span class="token entity" title="&#125;">&amp;#125;</span>
 </code></pre>
 <p>(3) 在index.js 的routes:上面平行添加 </p>
 <pre class=" language-js"><code class="language-js">mode<span class="token punctuation">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//去掉url中的#</span>
@@ -899,65 +899,65 @@ vue create testapp
 <li><p>打开前端工程，在school组件中编写获取服务端数据</p>
 </li>
 </ol>
-<pre class=" language-vue"><code class="language-vue"><script>
-import Axios from 'axios'
-export default &#123;
-  methods: &#123;
-    loadSchool () &#123;
-      var api = 'http://127.0.0.1:8000/first'
-      Axios.get(api)
-        .then((Response) => &#123;
-          console.log(Response.data)
-        //   this.schools = Response.data
-        &#125;)
-        .catch((error) => &#123;
-          console.log(error)
-        &#125;)
-    &#125;
-  &#125;,
-  mounted () &#123;
-    this.loadSchool()
-  &#125;
-&#125;
-</script>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token keyword">import</span> Axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  methods<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    loadSchool <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> api <span class="token operator">=</span> <span class="token string">'http://127.0.0.1:8000/first'</span>
+      Axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>api<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Response<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">//   this.schools = Response.data</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">loadSchool</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>   3)请求对接<br>   报错：跨域问题<br>   <code>打开python服务端工程</code>，添加跨域支持<br>   打开<code>settings.py</code><br>    A. INSTALLED_APPS: ‘corsheaders’<br>    B. MIDDLEWARE：’corsheaders.middleware.CorsMiddleware’,<br>       必须第一项<br>    注释掉 ‘django.middleware.csrf.CsrfViewMiddleware’,<br>    C. CORS_ORIGIN_ALLOW_ALL=True  #解决跨域问题</p>
 <p>(2)解析数据<br>school.vue中</p>
-<pre class=" language-VUE"><code class="language-VUE"><script>
-import Axios from 'axios'
-export default &#123;
-  data () &#123;
-    return &#123;
-      schools: []
-    &#125;
-  &#125;,// 添加了一个获取数据的方法
-  methods: &#123;
-    loadSchool () &#123;
-      var api = 'http://127.0.0.1:8000/first'
-      Axios.get(api)
-        .then((Response) => &#123;
-          console.log(Response.data)
-        //   this.schools = Response.data
-        &#125;)
-        .catch((error) => &#123;
-          console.log(error)
-        &#125;)
-    &#125;
-  &#125;,
-  mounted () &#123;
-    this.loadSchool()
-  &#125;
-&#125;
-</script>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token keyword">import</span> Axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  data <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      schools<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 添加了一个获取数据的方法</span>
+  methods<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    loadSchool <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> api <span class="token operator">=</span> <span class="token string">'http://127.0.0.1:8000/first'</span>
+      Axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>api<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Response<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+        <span class="token comment" spellcheck="true">//   this.schools = Response.data</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">loadSchool</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 </code></pre>
 <ol start="2">
 <li>在template中</li>
 </ol>
-<pre class=" language-VUE"><code class="language-VUE"><template>
-  <div>
-    &#123;&#123;schools&#125;&#125;
-  </div>
-</template>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token entity" title="&#123;">&amp;#123;</span><span class="token entity" title="&#123;">&amp;#123;</span>schools<span class="token entity" title="&#125;">&amp;#125;</span><span class="token entity" title="&#125;">&amp;#125;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
 </code></pre>
 <ol start="3">
 <li>测试：可以看到数据，但是不友好<br> schools[0] …其它数据的显示演示</li>
@@ -968,7 +968,7 @@ export default &#123;
 <p>见文档中的导入说明</p>
 <p><a target="_blank" rel="noopener" href="https://www.antdv.com/docs/vue/getting-started-cn/">ant-design-vuegu官网</a></p>
 <p>3-1 配置新模块<br>在 <code>main.js</code>中导入下面模块</p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
 <span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App'</span>
 <span class="token keyword">import</span> router <span class="token keyword">from</span> <span class="token string">'./router'</span>
 <span class="token keyword">import</span> Antd <span class="token keyword">from</span> <span class="token string">'ant-design-vue'</span>       <span class="token comment" spellcheck="true">//这里是新的</span>
@@ -985,55 +985,55 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
 </code></pre>
 <p>5-2 添加列表标签<br>5-2-1在school.vue template中</p>
-<pre class=" language-vue"><code class="language-vue"><template>
-  <div>
-    <div class="schoollist">
-      <a-table :columns="columns" :data-source="schools">
-      </a-table>
-    </div>
-  </div>
-</template>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>schoollist<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a-table</span> <span class="token attr-name">:columns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>columns<span class="token punctuation">"</span></span> <span class="token attr-name">:data-source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>schools<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a-table</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
 </code></pre>
 <p>5-2-2在school.vue的script脚本</p>
-<pre class=" language-vue"><code class="language-vue"><script>
-import Axios from 'axios'
-const columns = [
-  &#123;
-    title: '编号',
-    dataIndex: 'id',
-    key: 'id'
-  &#125;,
-  &#123;
-    title: '所在学校',
-    dataIndex: 'name',
-    key: 'name'
-  &#125;
-]
-export default &#123;
-  data () &#123;
-    return &#123;
-      columns,
-      schools: []
-    &#125;
-  &#125;,
-  methods: &#123;
-    loadSchool () &#123;
-      var api = 'http://127.0.0.1:8000/first'
-      Axios.get(api)
-        .then((Response) => &#123;
-          console.log(Response.data)
-          this.schools = Response.data
-        &#125;)
-        .catch((error) => &#123;
-          console.log(error)
-        &#125;)
-    &#125;
-  &#125;,
-  mounted () &#123;
-    this.loadSchool()
-  &#125;
-&#125;
-</script>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script language-javascript">
+<span class="token keyword">import</span> Axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token keyword">const</span> columns <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    title<span class="token punctuation">:</span> <span class="token string">'编号'</span><span class="token punctuation">,</span>
+    dataIndex<span class="token punctuation">:</span> <span class="token string">'id'</span><span class="token punctuation">,</span>
+    key<span class="token punctuation">:</span> <span class="token string">'id'</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    title<span class="token punctuation">:</span> <span class="token string">'所在学校'</span><span class="token punctuation">,</span>
+    dataIndex<span class="token punctuation">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
+    key<span class="token punctuation">:</span> <span class="token string">'name'</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">]</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  data <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      columns<span class="token punctuation">,</span>
+      schools<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  methods<span class="token punctuation">:</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    loadSchool <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> api <span class="token operator">=</span> <span class="token string">'http://127.0.0.1:8000/first'</span>
+      Axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>api<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Response<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>schools <span class="token operator">=</span> Response<span class="token punctuation">.</span>data
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">loadSchool</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 </code></pre>
 
                 
@@ -1557,7 +1557,7 @@ export default &#123;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.4k</span>&nbsp;字
+                class="white-color">4.6k</span>&nbsp;字
             
             
             
