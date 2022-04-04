@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Tyの小站">
+    <meta name="keywords" content="HFSS使用指南, Tyの小站">
     <meta name="description" content="一个啥都会一点点的咸鱼">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Tyの小站</title>
+    <title>HFSS使用指南 | Tyの小站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">HFSS使用指南</h1>
                 </div>
             </div>
         </div>
@@ -430,12 +430,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/HFSS/">
+                                <span class="chip bg-color">HFSS</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7/" class="post-category">
+                                学习工具
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -444,28 +457,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-18
+                    2022-01-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-18
+                    2021-06-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    74
+                    2,159
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -485,19 +498,136 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span>
+                <h1 id="HFSS使用指南"><a href="#HFSS使用指南" class="headerlink" title="HFSS使用指南"></a>HFSS使用指南</h1><p>推荐博主<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41542947/category_10304443.html">https://blog.csdn.net/qq_41542947/category_10304443.html</a></p>
+<p>软件界面介绍</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41542947/article/details/108063552">https://blog.csdn.net/qq_41542947/article/details/108063552</a></p>
+<h2 id="一、初始设置"><a href="#一、初始设置" class="headerlink" title="一、初始设置"></a>一、初始设置</h2><p>1.创建工程：File–&gt;New，File–&gt;Save</p>
+<p>2.点击工具栏<img src="HFSS%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97.assets/1.png" alt="1">，进入HFSS设计界面</p>
+<p>3.设置模型计算模式：HFSS–&gt;Solution Type</p>
+<p>4.基础设置，比如基本单位：Tools–&gt;Options–&gt;General Options–&gt;Default Units</p>
+<h2 id="二、设计天线（微带）"><a href="#二、设计天线（微带）" class="headerlink" title="二、设计天线（微带）"></a>二、设计天线（微带）</h2><h3 id="1-添加变量："><a href="#1-添加变量：" class="headerlink" title="1.添加变量："></a>1.添加变量：</h3><p>HFSS–&gt;Design Properties(设计属性)，参照设计图，逐个变量添加（不要忘记单位），Add————</p>
+<p>H=1.6mm，W0=37.26mm，W1=1.16mm，W2=2.98mm，L0=30.21mm，L1=17.45mm，L2=15mm</p>
+<h3 id="2-进行图形绘制"><a href="#2-进行图形绘制" class="headerlink" title="2.进行图形绘制"></a>2.进行图形绘制</h3><p>2-1 画基板：工具栏找立方体（Draw box），单击后拖动画底，再单击拖动画高，随便画一个，参数一会设置。选择左侧第二栏，操作树中新出现的Box1（即刚绘制的），双击Box1，更改属性如下：</p>
+<pre class=" language-html"><code class="language-html">Name:substrate
+Material:FR4_epoxy(需要选择Edit，然后搜索)
+Transparent:0.7
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server
+<p>设置基板大小（将一开始定义的变量赋给立方体）：双击CreateBox，设置(更改)如下属性：</p>
+<pre class=" language-html"><code class="language-html">Position：-L0,-W0,0mm   #算出来的立方体绘制的起始位置
+XSize：1.5*L0+L1+L2
+YSize：2*W0
+ZSize：H
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate
+<p>确定后，按Ctrl+D，将图形恢复至中心位置（鼠标滚轮也可）</p>
+<p>2-2 画辐射贴片</p>
+<p>工具栏找矩形（Draw Rectangle），单击后拖动，再单击完成绘制</p>
+<p>同上</p>
+<p>更改属性如下：</p>
+<pre class=" language-html"><code class="language-html">Name:patch
+Material:Global
+color：最好金黄色(金属颜色)
+Transparent:0.7
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy
+<p>设置天线尺寸：双击CreateRectangle，设置(更改)如下属性：</p>
+<pre class=" language-html"><code class="language-html">Position：-L0/2,-W0/2,H
+XSize：L0
+YSize：W0
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>2-3 画传输线</p>
+<p>工具栏找矩形（Draw Rectangle），单击后拖动，再单击完成绘制</p>
+<p>同上</p>
+<p>更改属性如下：</p>
+<pre class=" language-html"><code class="language-html">Name:TLINE
+Material:Global
+color：最好金黄色(金属颜色)
+Transparent:0.7
+</code></pre>
+<p>设置天线尺寸：双击CreateRectangle，设置(更改)如下属性：</p>
+<pre class=" language-html"><code class="language-html">Position：L0/2,-W1/2,H
+XSize：L1
+YSize：W1
+</code></pre>
+<p>设置完可能没有在中间，是视角问题，Alt+鼠标左键</p>
+<p>2-4 画第二根传输线</p>
+<p>工具栏找矩形（Draw Rectangle），单击后拖动，再单击完成绘制</p>
+<p>同上</p>
+<p>更改属性如下：</p>
+<pre class=" language-html"><code class="language-html">Name:50ohm
+Material:Global
+color：最好金黄色(金属颜色)
+Transparent:0.7
+</code></pre>
+<p>设置天线尺寸：双击CreateRectangle，设置(更改)如下属性：</p>
+<pre class=" language-html"><code class="language-html">Position：L0/2+L1,-W2/2,H
+XSize：L2
+YSize：W2
+</code></pre>
+<p>设置完可能没有在中间，是视角问题，Alt+鼠标左键</p>
+<h3 id="3-合并绘制的天线"><a href="#3-合并绘制的天线" class="headerlink" title="3.合并绘制的天线"></a>3.合并绘制的天线</h3><p>按住Ctrl选中三个天线部分，选中后在工具栏找Unite，点击后完成合并</p>
+<h3 id="4-设置绘制出的天线为理想电场导体（设置边界条件）"><a href="#4-设置绘制出的天线为理想电场导体（设置边界条件）" class="headerlink" title="4.设置绘制出的天线为理想电场导体（设置边界条件）"></a>4.设置绘制出的天线为理想电场导体（设置边界条件）</h3><p>在选中天线后，右键，选择Assign Boundary–&gt;Perfect E</p>
+<h3 id="5-绘制空气腔（边界）"><a href="#5-绘制空气腔（边界）" class="headerlink" title="5.绘制空气腔（边界）"></a>5.绘制空气腔（边界）</h3><p>理论无限远也有电场，但软件算不出来，设个边界</p>
+<p>工具栏找立方体（Draw box），单击后拖动画底，再单击拖动画高</p>
+<p>更改属性如下：</p>
+<pre class=" language-html"><code class="language-html">Name:airBox
+Material:vacuum
+color：浅绿
+Transparent:0.8
+</code></pre>
+<p>设置空气腔尺寸：双击CreateRectangle，设置(更改)如下属性：</p>
+<pre class=" language-html"><code class="language-html">Position：-L0/2-30mm,-W0/2-30mm,0
+XSize：L0+L1+L2+30mm
+YSize：W0+60mm
+ZSize：H+30mm
+</code></pre>
+<p>设置完可能没有在中间，是视角问题，Alt+鼠标左键</p>
+<h3 id="6-设置绘制出的空气腔为辐射边界（设置边界条件）"><a href="#6-设置绘制出的空气腔为辐射边界（设置边界条件）" class="headerlink" title="6.设置绘制出的空气腔为辐射边界（设置边界条件）"></a>6.设置绘制出的空气腔为辐射边界（设置边界条件）</h3><p>在选中airBox后，右键，选择Assign Boundary–&gt;Radiation，默认即可</p>
+<p>按住滚轮旋转模型到底面，在基板上右键选择Select Faces，然后再右键底面设置为PerfectE</p>
+<h3 id="7-增加一个端口"><a href="#7-增加一个端口" class="headerlink" title="7.增加一个端口"></a>7.增加一个端口</h3><p>电磁波要从端口传送进来</p>
+<p>先选择工具栏中的Drawing plane(绘制平面)选项为YZ（原来是XY）。工具栏找矩形（Draw Rectangle），单击后拖动，再单击完成绘制</p>
+<p>更改属性如下：</p>
+<pre class=" language-html"><code class="language-html">Name:port1
+Material:Global
+color：砖红（与其他颜色区分开即可）
+Transparent:0.5
+</code></pre>
+<p>设置端口大小：双击CreateRectangle，设置(更改)如下属性：</p>
+<pre class=" language-html"><code class="language-html">Position：L0/2+L1+L2,-4*W2,0mm
+YSize：8*W2
+ZSize：8*H
+</code></pre>
+<p>右键画完的端口，选择Assign Excitation(分配端口激励)下的Wave Port（波形端口），前两步默认即可，第三步Port Renormalization（端口重新规范化）选Renormalize All Modes设为50ohm</p>
+<p>ohm：欧姆</p>
+<p>建模到此完成</p>
+<h2 id="三、分析"><a href="#三、分析" class="headerlink" title="三、分析"></a>三、分析</h2><p>回到最左侧工程目录处，选择Analysis，右键，选择Add Solution Setup（增加解析设置）。在General标签下，更改Solution Frequency（求解频率）为2.45GHz，更改Maximum Number of（最大迭代次数）为20；Maximum Delta S（收敛误差）为0.02</p>
+<p>在新添加的Analysis下的Setup1上右键选择 Add Frequency Sweep（添加频率扫描）。在General标签下，更改Sweep Type ：Fast ，Start：1.5GHz，Stop：3.5GHz，Step Size：0.01GHz。点击Display，右侧会生成一串连续的数字，在后续分析中，会逐个频率求解，并将结果体现在曲线图中</p>
+<p>选择工具栏一个绿色的对号，查看是否有未设置好的变量，有个警告是Boundaries and  Excitations，是指基板和空气腔PerfectE重合了，计算时会默认忽略一个，所以不必处理。注意区分警告与报错，警告不一定会影响结果，但是报错注定算不出来。</p>
+<p>选择对号旁边的叹号，开始分析</p>
+<h2 id="四、查看分析结果"><a href="#四、查看分析结果" class="headerlink" title="四、查看分析结果"></a>四、查看分析结果</h2><p>回到最左侧工程目录处，选择Results，右键，选择Create Modal Solution Data Report（创建模式解决方案数据报表）——&gt;Rectangular Stacked Plot(直角坐标系)—–&gt;Trace(轨迹)</p>
+<p>Category（种类）：S Parameter</p>
+<p>Function（函数）：dB</p>
+<p>选择New Report</p>
+<p>观察，在图像的线上右键，选择Marker——&gt;Add Marker，在最低点做标记，观察图像左上角数值dB=-18,因为我们设定的天线的工作频率为2.45GHz，在2.45GHz处做个标记，值为-0.几，因此发生偏移，偏移至了2.15GHz，因此需要优化</p>
+<h2 id="五、优化L0"><a href="#五、优化L0" class="headerlink" title="五、优化L0"></a>五、优化L0</h2><p>回到最左侧工程目录处，选择Optimetrics，右键，选择Add—&gt;Parametric(参数)，在Sweep Definitions标签下，选择Add，选择Variable值为L0（因为天线工作频率跟天线长度L0有关）</p>
+<p>Start：27mm</p>
+<p>Stop：30mm</p>
+<p>Step：1mm</p>
+<p>点击中间的Add，然后OK</p>
+<p>选择刚创建的优化参数ParametricSetup1，右键选择分析Analyze</p>
+<p>分析结束后，再次生成新的坐标图</p>
+<p>回到最左侧工程目录处，选择Results，右键，选择Create Modal Solution Data Report（创建模式解决方案数据报表）——&gt;Rectangular Stacked Plot(直角坐标系)—–&gt;Families，选择将刚才测试出的L0，点击Edit列中的 … 发现优化时设置的值全部出现，此时再添加报表，会将L0这几个值对应的曲线都体现在同一个图像中</p>
+<p>找到极值点离2.45GHz最近的曲线，单击它，图像右上角观察发现是L0=28mm对应的曲线，因此28mm的天线尺寸才是最接近我们设计目标的，接下来更正原L0的值</p>
+<h2 id="六、修改原值"><a href="#六、修改原值" class="headerlink" title="六、修改原值"></a>六、修改原值</h2><p>在菜单栏，HFSS–&gt;Design Properties，将L0值改为28mm，点击确定</p>
+<h2 id="七、优化W1"><a href="#七、优化W1" class="headerlink" title="七、优化W1"></a>七、优化W1</h2><p>回到最左侧工程目录处，选择Optimetrics，右键，选择Add—&gt;Parametric(参数)，在Sweep Definitions标签下，选择Add，选择Variable值为W1（因为天线工作频率还跟1/4波长阻抗转换器的宽度W1有关，宽度不同阻抗不同）</p>
+<p>Start:0.9mm</p>
+<p>Stop:1.4mm</p>
+<p>Step:0.1mm</p>
+<p>点击中间的Add，然后OK</p>
+<p>选择刚创建的优化参数ParametricSetup2，右键选择分析Analyze</p>
+<p>分析结束后，再次生成新的坐标图</p>
+<p>回到最左侧工程目录处，选择Results，右键，选择Create Modal Solution Data Report（创建模式解决方案数据报表）——&gt;Rectangular Stacked Plot(直角坐标系)—–&gt;Families，选择将刚才测试出的W1 ，点击Edit列中的 … 发现优化时设置的值全部出现，此时再添加报表，会将W1这几个值对应的曲线都体现在同一个图像中,因为只测试W1，所以需要控制L0为28mm（刚测出来的），观察图像，因为S(1,1)系数越小越好，所以选中最低点那条线，(看不出来可以用滚轮放大)，发现是W1=1mm时，要比所有值都小，因此此时最为合适</p>
+<h2 id="八、修改原值"><a href="#八、修改原值" class="headerlink" title="八、修改原值"></a>八、修改原值</h2><p>在菜单栏，HFSS–&gt;Design Properties，将W1值改为1mm，点击确定</p>
+<h2 id="九、再次以相同频率分析"><a href="#九、再次以相同频率分析" class="headerlink" title="九、再次以相同频率分析"></a>九、再次以相同频率分析</h2><p>回到最左侧工程目录处，选择Analysis在新添加的Analysis下的Setup1上右键，选择Analyze</p>
+<h2 id="十、生成最终直角坐标系图像"><a href="#十、生成最终直角坐标系图像" class="headerlink" title="十、生成最终直角坐标系图像"></a>十、生成最终直角坐标系图像</h2><p>回到最左侧工程目录处，选择Results，右键，选择Create Modal Solution Data Report（创建模式解决方案数据报表）——&gt;Rectangular Stacked Plot(直角坐标系)—–&gt;Families，将W1，L0设置为刚才测试好的最优解 ，此时再添加报表，图像上只有一条曲线</p>
 
                 
             </div>
@@ -514,7 +644,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Tianyu Shao</a>
+                    <a href="/about" rel="external nofollow noreferrer">邵天宇</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -524,7 +654,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://tyisok.github.io/2021/05/18/hello-world/">https://tyisok.github.io/2021/05/18/hello-world/</a>
+                    <a href="https://tyisok.github.io/2022/01/15/hfss-shi-yong-zhi-nan/">https://tyisok.github.io/2022/01/15/hfss-shi-yong-zhi-nan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -537,7 +667,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Tianyu Shao</a>
+                    <a href="/about" target="_blank">邵天宇</a>
                     !
                 </span>
             </div>
@@ -561,7 +691,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/HFSS/">
+                                    <span class="chip bg-color">HFSS</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -733,31 +867,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/05/19/qian-hou-duan-kuang-jia-ru-men/">
+                <a href="/2022/01/15/xu-ni-xian-shi-ji-zhu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="前(VUE)后端(django)框架入门">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="虚拟现实技术知识总结">
                         
-                        <span class="card-title">前(VUE)后端(django)框架入门</span>
+                        <span class="card-title">虚拟现实技术知识总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            华慧IT工作室新人培训用，django与vue框架的使用
+                            期末考试画知识点
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-19
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-15
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Web%E5%BC%80%E5%8F%91/" class="post-category">
-                                    Web开发
+                            <a href="/categories/%E5%B0%B1%E6%98%AF%E5%AD%A6-%E7%8C%9B%E7%8C%9B%E5%AD%A6/" class="post-category">
+                                    就是学,猛猛学
                                 </a>
                             
                             
@@ -767,12 +901,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Django/">
-                        <span class="chip bg-color">Django</span>
+                    <a href="/tags/%E5%B0%B1%E6%98%AF%E5%AD%A6/">
+                        <span class="chip bg-color">就是学</span>
                     </a>
                     
-                    <a href="/tags/Vue/">
-                        <span class="chip bg-color">Vue</span>
+                    <a href="/tags/%E7%8C%9B%E7%8C%9B%E5%AD%A6/">
+                        <span class="chip bg-color">猛猛学</span>
                     </a>
                     
                 </div>
@@ -783,10 +917,10 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/18/hello-world/">
+                <a href="/2022/01/15/hello-world/">
                     <div class="card-image">
                         
                         
@@ -803,7 +937,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-15
                             </span>
                         <span class="publish-author">
                             
@@ -813,7 +947,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -1004,7 +1137,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2019-2022</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">Tianyu Shao</a>
@@ -1013,7 +1146,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.3k</span>&nbsp;字
+                class="white-color">10.7k</span>&nbsp;字
             
             
             

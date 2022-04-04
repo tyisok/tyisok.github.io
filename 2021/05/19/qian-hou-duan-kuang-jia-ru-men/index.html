@@ -468,21 +468,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-23
+                    2022-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4,057
+                    4,447
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    19 分
                 </div>
                 
 
@@ -924,6 +924,54 @@ vue create testapp
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 </code></pre>
 <p>   3)请求对接<br>   报错：跨域问题<br>   <code>打开python服务端工程</code>，添加跨域支持<br>   打开<code>settings.py</code><br>    A. INSTALLED_APPS: ‘corsheaders’<br>    B. MIDDLEWARE：’corsheaders.middleware.CorsMiddleware’,<br>       必须第一项<br>    注释掉 ‘django.middleware.csrf.CsrfViewMiddleware’,<br>    C. CORS_ORIGIN_ALLOW_ALL=True  #解决跨域问题</p>
+<blockquote>
+<p>注：</p>
+<p>这里（VSCODE）会有一些代码的书写提示错误（虽然没有影响程序运行，但是看起来很让人讨厌）<br>vsCode中使用ESLint自动格式化代码<br>1安装ESLint插件（如果之前没有安装的话）<br>2配置settings.json，设置启用eslint自动格式化<br>  首选项 –&gt;设置–》settings.json，将我提供的settings.json中的全部代码复制到这里并保存<br>  然后你再修改你的代码后，当保存时，系统会自动使用eslint格式进行修正</p>
+</blockquote>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  // vscode默认启用了根据文件类型自动设置tabsize的选项
+  <span class="token property">"editor.detectIndentation"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  // 重新设定tabsize
+  <span class="token property">"editor.tabSize"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+  // #每次保存的时候自动格式化 
+  <span class="token property">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  // 添加 vue 支持
+  <span class="token property">"eslint.validate"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"javascript"</span><span class="token punctuation">,</span>
+    <span class="token string">"javascriptreact"</span><span class="token punctuation">,</span>
+    <span class="token string">"vue"</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  //  #让prettier使用eslint的代码格式进行校验 
+  <span class="token property">"prettier.eslintIntegration"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  //  #去掉代码结尾的分号 
+  <span class="token property">"prettier.semi"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  //  #使用带引号替代双引号 
+  <span class="token property">"prettier.singleQuote"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  //  #让函数(名<span class="token punctuation">)</span>和后面的括号之间加个空格
+  <span class="token property">"javascript.format.insertSpaceBeforeFunctionParenthesis"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  // #这个按用户自身习惯选择 
+  <span class="token property">"vetur.format.defaultFormatter.html"</span><span class="token operator">:</span> <span class="token string">"js-beautify-html"</span><span class="token punctuation">,</span>
+  // #让vue中的js按编辑器自带的ts格式进行格式化 
+  <span class="token property">"vetur.format.defaultFormatter.js"</span><span class="token operator">:</span> <span class="token string">"vscode-typescript"</span><span class="token punctuation">,</span>
+  <span class="token property">"vetur.format.defaultFormatterOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"js-beautify-html"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"wrap_attributes"</span><span class="token operator">:</span> <span class="token string">"force-aligned"</span>
+      // #vue组件中html代码格式化样式
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  // 格式化stylus<span class="token punctuation">,</span> 需安装Manta's Stylus Supremacy插件
+  <span class="token property">"stylusSupremacy.insertColons"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> // 是否插入冒号
+  <span class="token property">"stylusSupremacy.insertSemicolons"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> // 是否插入分好
+  <span class="token property">"stylusSupremacy.insertBraces"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> // 是否插入大括号
+  <span class="token property">"stylusSupremacy.insertNewLineAroundImports"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> // import之后是否换行
+  <span class="token property">"stylusSupremacy.insertNewLineAroundBlocks"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"editor.suggestSelection"</span><span class="token operator">:</span> <span class="token string">"first"</span><span class="token punctuation">,</span>
+  <span class="token property">"vsintellicode.modify.editor.suggestSelection"</span><span class="token operator">:</span> <span class="token string">"automaticallyOverrodeDefaultValue"</span><span class="token punctuation">,</span>
+  <span class="token property">"editor.codeActionsOnSave"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"source.fixAll.eslint"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span> // 两个选择器中是否换行
+<span class="token punctuation">}</span>
+</code></pre>
 <p>(2)解析数据<br>school.vue中</p>
 <pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>script<span class="token operator">></span>
 <span class="token keyword">import</span> Axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
@@ -1330,35 +1378,52 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/18/hello-world/">
+                <a href="/2021/05/19/qian-hou-duan-kuang-jia-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="前(VUE)后端(django)框架入门">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">前(VUE)后端(django)框架入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            华慧IT工作室新人培训用，django与vue框架的使用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-19
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Tianyu Shao
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Web%E5%BC%80%E5%8F%91/" class="post-category">
+                                    Web开发
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Django/">
+                        <span class="chip bg-color">Django</span>
+                    </a>
+                    
+                    <a href="/tags/Vue/">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1550,7 +1615,7 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2019-2022</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">Tianyu Shao</a>
@@ -1559,7 +1624,7 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.3k</span>&nbsp;字
+                class="white-color">10.7k</span>&nbsp;字
             
             
             
