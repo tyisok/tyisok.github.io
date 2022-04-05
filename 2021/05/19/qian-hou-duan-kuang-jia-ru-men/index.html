@@ -468,21 +468,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-03
+                    2022-04-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4,447
+                    4,681
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    19 分
+                    20 分
                 </div>
                 
 
@@ -513,21 +513,34 @@
 <p>Django将MVC中的视图进一步分解为 Django视图 和 Django模板两个部分，分别决定 “展现哪些数据” 和 “如何展现”，使得Django的模板可以根据需要随时替换，而不仅仅限制于内置的模板。框架把控制层给封装了，无非与数据交互这层都是数据库表的读,写,删除,更新的操作。在写程序的时候，只要调用相应的方法就行了</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27717315">https://zhuanlan.zhihu.com/p/27717315</a> 简单理解什么是MVC</p>
 </blockquote>
-<h3 id="一、django及其附属工具安装"><a href="#一、django及其附属工具安装" class="headerlink" title="一、django及其附属工具安装"></a>一、django及其附属工具安装</h3><p>1- 安装==<em>django</em>==开发环境</p>
-<pre class=" language-cmd"><code class="language-cmd">pip install django
+<p>工具包地址：<br>链接：<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/fb988374b279">https://pan.quark.cn/s/fb988374b279</a><br>提取码：p1Am</p>
+<h3 id="一、django及其附属工具安装"><a href="#一、django及其附属工具安装" class="headerlink" title="一、django及其附属工具安装"></a>一、django及其附属工具安装</h3><p>1- 安装**<code>django</code>**开发环境（python3.7+django2.0）</p>
+<pre class=" language-cmd"><code class="language-cmd">pip install django==2.0
 </code></pre>
-<p>2- 安装**<code>pycharm profession</code>**</p>
-<p>(<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/0gyxn41ck2Cd7D0jKMlS_Q">https://mp.weixin.qq.com/s/0gyxn41ck2Cd7D0jKMlS_Q</a>)</p>
-<p>3-1 安装**<code>mysql</code>**数据库<br><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a><br>下载并安装</p>
-<p>3-2 安装数据库客户端 **<code>Navicat Premium 15</code>**，需破解</p>
-<p>3-3 安装==<em>pymysql</em>==<br>这是python来操作mysql数据库的</p>
+<blockquote>
+<p>版本最好保持一致，追求刺激可以自选版本</p>
+<p>多个python版本注意修改环境变量</p>
+<p>安装后续django依赖模块时，会自动更新到适合的版本，如果另后续出现问题可自行百度</p>
+</blockquote>
+<p>2- 安装**<code>pycharm</code>**</p>
+<p><a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a></p>
+<p>pycharm只是一个看代码的工具，专业版需要使用科技手段，有条件请支持正版，没条件社区版同样够用</p>
+<p>3-1 安装**<code>mysql</code>**数据库</p>
+<p><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a></p>
+<p>下载并安装mysql5.7.31——工具包内有，注意版本保持一致</p>
+<p>安装教程：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zixiao_love/article/details/100118585">https://blog.csdn.net/zixiao_love/article/details/100118585</a></p>
+<blockquote>
+<p>注：在设置密码时一定要谨慎，不想找trouble，就直接123456</p>
+</blockquote>
+<p>3-2 安装数据库客户端 **<code>Navicat Premium 15</code>**，需科技手段</p>
+<p>3-3 安装 **<code>pymysql</code>**——cmd中操作<br>这是python来操作mysql数据库的</p>
 <pre class=" language-cmd"><code class="language-cmd">pip install pymysql
 </code></pre>
-<p>4- 安装*==restframework==    ==markdown==   ==django-filter==*依赖:</p>
+<p>4- 安装 <strong><code>restframework</code></strong>  **<code>markdowndjango-filte</code>**依赖:</p>
 <p>主要适用于前后端分离项目</p>
 <pre class=" language-cmd"><code class="language-cmd">pip install djangorestframework markdown Django-filter
 </code></pre>
-<p>5-  安装跨域支持*==Django-cors-headers==*</p>
+<p>5-  安装跨域支持 <strong><code>Django-cors-headers</code></strong></p>
 <pre class=" language-cmd"><code class="language-cmd">pip  install  Django-cors-headers
 </code></pre>
 <p>6- 开发接口测试 <strong><code>Postman</code></strong><br>    下载：<a target="_blank" rel="noopener" href="https://www.postman.com/downloads/">https://www.postman.com/downloads/</a></p>
@@ -557,7 +570,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 </code></pre>
 <p>7-4 浏览器测试<br>   打开一个浏览器，在地址框里录入:<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a><br>    可以打开一个python Django的网页说明配置成功</p>
-<h3 id="二、django工程开发流程"><a href="#二、django工程开发流程" class="headerlink" title="二、django工程开发流程"></a>二、django工程开发流程</h3><p><strong>0 在合适的位置创建新文件夹django_stu,并使用pycharm打开此文件夹</strong></p>
+<h3 id="二、django工程开发流程"><a href="#二、django工程开发流程" class="headerlink" title="二、django工程开发流程"></a>二、django工程开发流程</h3><p><strong>0 在合适的位置创建新文件夹django_stu,并使用pycharm打开此文件夹</strong>————如果设置虚拟环境，需要提前配置好虚拟环境的Python编译器</p>
 <p><strong>1 创建一个名为<em>StudSys</em>工程项目</strong><br>   在pycharm左下角Terminal工具 执行下面的指令：</p>
 <pre class=" language-cmd"><code class="language-cmd">django-admin  startproject  StudSys
 </code></pre>
@@ -568,7 +581,9 @@ Quit the server with CONTROL-C.
 </code></pre>
 <p>可以通过<code>python manage.py help</code>看下其它指令功能，一般情况下不应该编辑这个文件。</p>
 <p>与工程名相同的文件夹下：</p>
-<p>settings.py：所有和项目相关的配置都是放在这个里面，很重要<br>urls.py：配置URL路由的文件。<br>wsgi.py：项目与WSGI协议兼容的web服务器入口，部署的时候需要用到的</p>
+<p>settings.py：所有和项目相关的配置都是放在这个里面，很重要</p>
+<p>urls.py：配置URL路由的文件。</p>
+<p>wsgi.py：项目与WSGI协议兼容的web服务器入口，部署的时候需要用到的</p>
 </blockquote>
 <p><strong>2 创建一个APP，如<em>SchoolApp</em></strong><br>在Terminal工具（命令行）工具继续执行</p>
 <pre class=" language-cmd"><code class="language-cmd">cd StudSys 
@@ -577,10 +592,11 @@ Quit the server with CONTROL-C.
 <pre class=" language-cmd"><code class="language-cmd">python manage.py  startapp  SchoolApp
 </code></pre>
 <blockquote>
-<p><strong>app是django项目的组成部分。</strong><br>   一个app代表项目中的一个模块，所有URL（统一资源定位符）请求的响应都是由app来处理。<br>   比如豆瓣，里面有图书，电影，音乐，同城等许许多多的模块，<br>   从django的角度来看，图书，电影这些模块就是app，<br>   图书，电影这些app共同组成豆瓣这个项目。<br>   因此django项目由许多app组成，一个app可以被用到其他项目，django也能拥有不同的app</p>
+<p><strong>app是django项目的组成部分。</strong><br>一个app代表项目中的一个模块，所有URL（统一资源定位符）请求的响应都是由app来处理。<br>比如豆瓣，里面有图书，电影，音乐，同城等许许多多的模块，<br>从django的角度来看，图书，电影这些模块就是app，<br>图书，电影这些app共同组成豆瓣这个项目。<br>因此django项目由许多app组成，一个app可以被用到其他项目，django也能拥有不同的app</p>
+<p>Django 采用了 MVT 的软件设计模式，即模型（Model），视图（View）和模板（Template）</p>
 </blockquote>
 <blockquote>
-<p><strong>app文件夹里都有什么：</strong><br>   amdin.py: 该应用后台管理系统配置<br>   tests.py: 自动化测试模块  在这里编写测试脚本<br>   apps.py: 自动生成<br>   models.py: 数据模块——-常用模块****<br>   views.py: 视图模块  代码逻辑处理主要地点——-常用模块****</p>
+<p><strong>app文件夹里都有什么：</strong><br>   amdin.py: 该应用后台管理系统配置<br>   tests.py: 自动化测试模块  在这里编写测试脚本<br>   apps.py: 自动生成<br>   models.py: 数据模块——-常用模块*<br>   views.py: 视图模块  代码逻辑处理主要地点——-常用模块*</p>
 </blockquote>
 <p>**3 添加新的==APP==**（激活应用）<br>  在 <strong>StudSys</strong>的<code>settings.py</code><br>  找到 <em>INSTALLED_APP</em> 添加 app名称，即 <code>&#39;SchoolApp&#39;</code></p>
 <p><strong>4 添加==rest framework==支持</strong><br>  在 <strong>StudSys</strong>的<code>settings.py</code><br>  找到 <em>INSTALLED_APP</em> 添加<code>&#39;rest_framework&#39;</code></p>
@@ -637,15 +653,15 @@ Quit the server with CONTROL-C.
 <pre class=" language-python"><code class="language-python">DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
         <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
-        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">'studdb'</span><span class="token punctuation">,</span>     <span class="token comment" spellcheck="true">##数据库名</span>
-        <span class="token string">'USER'</span><span class="token punctuation">:</span><span class="token string">'root'</span><span class="token punctuation">,</span>       <span class="token comment" spellcheck="true">##登陆名</span>
-        <span class="token string">'PASSWORD'</span><span class="token punctuation">:</span><span class="token string">'123456'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">##登陆密码</span>
-        <span class="token string">'HOST'</span><span class="token punctuation">:</span><span class="token string">'127.0.0.1'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">##地址</span>
-        <span class="token string">'PORT'</span><span class="token punctuation">:</span><span class="token string">'3306'</span><span class="token punctuation">,</span>       <span class="token comment" spellcheck="true">##端口号</span>
+        <span class="token string">'NAME'</span><span class="token punctuation">:</span> <span class="token string">'studdb'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">##数据库名</span>
+        <span class="token string">'USER'</span><span class="token punctuation">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">##登陆名</span>
+        <span class="token string">'PASSWORD'</span><span class="token punctuation">:</span> <span class="token string">'123456'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">##登陆密码</span>
+        <span class="token string">'HOST'</span><span class="token punctuation">:</span> <span class="token string">'127.0.0.1'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">##地址</span>
+        <span class="token string">'PORT'</span><span class="token punctuation">:</span> <span class="token string">'3306'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">##端口号</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><code>记得启动 mysql服务</code><br>如果报了mysql版本问题，<br>或是报Did you install mysqlclient?错误<br>需要在与<code>setting.py</code>同目录的<code>_init_.py</code>中添加</p>
+<p><code>记得启动 mysql服务</code><br>如果报了mysql版本问题，<br>或是报Did you install mysqlclient?错误<br>需要在与<code>setting.py</code>同目录的<code>__init__.py</code>中添加</p>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pymysql
 pymysql<span class="token punctuation">.</span>version_info <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token string">"final"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
 pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="token punctuation">(</span><span class="token punctuation">)</span>
@@ -662,13 +678,17 @@ python manage.py migrate
 </ol>
 <pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> django<span class="token punctuation">.</span>db <span class="token keyword">import</span> models
 <span class="token keyword">from</span> datetime <span class="token keyword">import</span> datetime
+
+
 <span class="token keyword">class</span> <span class="token class-name">firstModel</span><span class="token punctuation">(</span>models<span class="token punctuation">.</span>Model<span class="token punctuation">)</span><span class="token punctuation">:</span>
     name <span class="token operator">=</span> models<span class="token punctuation">.</span>CharField<span class="token punctuation">(</span>max_length<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span>
                             default<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">,</span>
                             verbose_name<span class="token operator">=</span><span class="token string">"第一个数据模型"</span><span class="token punctuation">)</span>
+
     <span class="token keyword">class</span> <span class="token class-name">Meta</span><span class="token punctuation">:</span>
-        verbose_name<span class="token operator">=</span><span class="token string">'第一个模型'</span>
-        verbose_name_plural<span class="token operator">=</span>verbose_name
+        verbose_name <span class="token operator">=</span> <span class="token string">'第一个模型'</span>
+        verbose_name_plural <span class="token operator">=</span> verbose_name
+
     <span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">return</span> self<span class="token punctuation">.</span>name
 </code></pre>
@@ -687,7 +707,8 @@ python manage.py migrate
         <span class="token keyword">return</span> Response<span class="token punctuation">(</span>_data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 </code></pre>
 <p><strong>16 再次-打开Postman 测试接口</strong><br>1)一般会得到空值的提示，list out of range，因为还没有向表里写数据</p>
-<p>#方法1：在表里直接写数据<br>#方法2：通过admin.py添加数据（相对复杂，可后期自学）</p>
+<p>#方法1：在表里直接写数据———暂用更直接的方式</p>
+<p>#方法2：通过admin.py添加数据（相对复杂，可后期自学）</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45819880/article/details/104037692">https://blog.csdn.net/weixin_45819880/article/details/104037692</a></p>
 <ol start="2">
 <li>再测试：报未序列化错误<br>return Response(_data[0].name)</li>
@@ -1624,7 +1645,7 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.7k</span>&nbsp;字
+                class="white-color">10.9k</span>&nbsp;字
             
             
             
