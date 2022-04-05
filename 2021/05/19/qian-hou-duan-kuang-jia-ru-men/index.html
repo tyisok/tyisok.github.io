@@ -475,7 +475,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4,681
+                    4,698
                 </div>
                 
 
@@ -502,12 +502,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
+                <p>技术交流群：932694278</p>
+<blockquote>
 <p>储备知识：Python，HTML，CSS，JavaScript等计算机基础知识</p>
 <p>web框架： 别人已经设定好的一个web网站模板，你学习它的规则，然后“填空”或“修改”成你自己需要的样子。</p>
 </blockquote>
-<span id="more"></span>
-
 <h2 id="第一部分：Python-Web-框架——django"><a href="#第一部分：Python-Web-框架——django" class="headerlink" title="第一部分：Python Web 框架——django"></a>第一部分：Python Web 框架——django</h2><blockquote>
 <p>Django是高水准的Python编程语言驱动的一个开源模型．视图，控制器风格的Web应用程序框架，它起源于开源社区。使用这种架构，程序员可以方便、快捷地创建高品质、易维护、数据库驱动的应用程序。这也正是OpenStack的Horizon组件采用这种架构进行设计的主要原因。另外，在Django框架中，还包含许多功能强大的第三方插件，使得Django具有较强的可扩展性。</p>
 <p>Django将MVC中的视图进一步分解为 Django视图 和 Django模板两个部分，分别决定 “展现哪些数据” 和 “如何展现”，使得Django的模板可以根据需要随时替换，而不仅仅限制于内置的模板。框架把控制层给封装了，无非与数据交互这层都是数据库表的读,写,删除,更新的操作。在写程序的时候，只要调用相应的方法就行了</p>
@@ -859,92 +858,6 @@ vue create testapp
 </code></pre>
 <p>3-7 推荐使用Chrome浏览器<br>   输入地址 ：<a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a><br>   显示出Vue的界面证明配置成功–可以准备开发</p>
 <h3 id="二、Vue工程开发流程"><a href="#二、Vue工程开发流程" class="headerlink" title="二、Vue工程开发流程"></a>二、Vue工程开发流程</h3><p><strong>0 在合适的位置创建新文件夹Vue_stu,并使用Vscode打开此文件夹</strong></p>
-<p><strong>1 初始化工程</strong></p>
-<p><strong>1-1 在Vue_stu目录下创建一个名为<em>studapp</em>工程项目</strong></p>
-<pre class=" language-cmd"><code class="language-cmd">vue init webpack studapp
-</code></pre>
-<p><strong>1-2 进入[项目名]文件夹</strong></p>
-<pre class=" language-cmd"><code class="language-cmd">cd  studapp
-</code></pre>
-<p><strong>1-3 安装依赖</strong></p>
-<pre class=" language-cmd"><code class="language-cmd">cnpm install 
-</code></pre>
-<p><strong>1-4 为项目安装网络请求axios</strong></p>
-<pre class=" language-cmd"><code class="language-cmd">cnpm install axios --save
-</code></pre>
-<p><strong>1-5 测试</strong></p>
-<pre class=" language-cmd"><code class="language-cmd">npm run dev
-</code></pre>
-<p><strong>2 代码开发部分</strong></p>
-<p><strong>2-1 简单理解目录</strong></p>
-<p>(1)文件结构简单介绍之<code>src</code>【其它的建议自行查阅官方文档】</p>
-<p>(2)运行项目时会自动打开一个界面，是如何做到的?</p>
-<blockquote>
-<p>main.js—&gt;App.vue—&gt;在App.vue  打几个字试试—&gt;刷新页面 </p>
-</blockquote>
-<p><code>【夹在中间的界面是哪来的？】</code></p>
-<blockquote>
-<p>打开 components（组件）的helloworld.vue  打几个字试试—刷新页面</p>
-<p>发现helloworld里的东西是会替换到router-view 标签</p>
-</blockquote>
-<p>(3)如何做到的的呢？</p>
-<p>打开 <code>router/index.js</code> 发现这里面有一个routes的配置</p>
-<blockquote>
-<p>要点：<br>1 导入需要配置的组件 import<br>2 添加配置项 path,name,component（组件）</p>
-</blockquote>
-<p>这样组件就会自动替换 router-view 标签  </p>
-<p>(4)组件的代码文档结构<br>由 &lt;template&gt;  &lt;script&gt;  &lt;style&gt; 三部分组成</p>
-<p><strong>2-2 开发一个可以显示学校信息的页面</strong></p>
-<p>2-2-1 创建组件<br>    <code>components/school.vue</code>   做出简单的修改</p>
-<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>school<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
-</code></pre>
-<p>2-2-2 配置路由<br>(1)<code>index.js</code>  中  </p>
-<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> School <span class="token keyword">from</span> <span class="token string">'@/components/school'</span>
-</code></pre>
-<p>(2)添加一个新routes</p>
-<pre class=" language-html"><code class="language-html">{
-    path: '/school',
-    name: 'School',
-    component: School
-}
-</code></pre>
-<p>(3) 在index.js 的routes:上面平行添加 </p>
-<pre class=" language-js"><code class="language-js">mode<span class="token punctuation">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//去掉url中的#</span>
-</code></pre>
-<p>(4) 打开浏览器访问<a target="_blank" rel="noopener" href="http://127.0.0.1:8080/school">http://127.0.0.1:8080/school</a><br>可以显示出  shool字说明成功</p>
-<p>2-2-3 与服务端交互</p>
-<p>(1)访问数据</p>
-<ol>
-<li><p>打开python服务器，测试之前接口[根据自己之前的路由名来测试]<br><a target="_blank" rel="noopener" href="http://127.0.0.1:8000/first">http://127.0.0.1:8000/first</a> 得到数据<br>保持服务端服务器打开状态</p>
-</li>
-<li><p>打开前端工程，在school组件中编写获取服务端数据</p>
-</li>
-</ol>
-<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>script<span class="token operator">></span>
-<span class="token keyword">import</span> Axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
-<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
-  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    loadSchool <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">var</span> api <span class="token operator">=</span> <span class="token string">'http://127.0.0.1:8000/first'</span>
-      Axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>api<span class="token punctuation">)</span>
-        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Response<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
-        <span class="token comment" spellcheck="true">//   this.schools = Response.data</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-        <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">loadSchool</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
-</code></pre>
-<p>   3)请求对接<br>   报错：跨域问题<br>   <code>打开python服务端工程</code>，添加跨域支持<br>   打开<code>settings.py</code><br>    A. INSTALLED_APPS: ‘corsheaders’<br>    B. MIDDLEWARE：’corsheaders.middleware.CorsMiddleware’,<br>       必须第一项<br>    注释掉 ‘django.middleware.csrf.CsrfViewMiddleware’,<br>    C. CORS_ORIGIN_ALLOW_ALL=True  #解决跨域问题</p>
 <blockquote>
 <p>注：</p>
 <p>这里（VSCODE）会有一些代码的书写提示错误（虽然没有影响程序运行，但是看起来很让人讨厌）<br>vsCode中使用ESLint自动格式化代码<br>1安装ESLint插件（如果之前没有安装的话）<br>2配置settings.json，设置启用eslint自动格式化<br>  首选项 –&gt;设置–》settings.json，将我提供的settings.json中的全部代码复制到这里并保存<br>  然后你再修改你的代码后，当保存时，系统会自动使用eslint格式进行修正</p>
@@ -993,15 +906,72 @@ vue create testapp
   <span class="token punctuation">}</span> // 两个选择器中是否换行
 <span class="token punctuation">}</span>
 </code></pre>
-<p>(2)解析数据<br>school.vue中</p>
-<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+<p><strong>1 初始化工程</strong></p>
+<p><strong>1-1 在Vue_stu目录下创建一个名为<em>studapp</em>工程项目</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">vue init webpack studapp
+</code></pre>
+<p><strong>1-2 进入[项目名]文件夹</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">cd  studapp
+</code></pre>
+<p><strong>1-3 安装依赖</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">cnpm install 
+</code></pre>
+<p><strong>1-4 为项目安装网络请求axios</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">cnpm install axios --save
+</code></pre>
+<p><strong>1-5 测试</strong></p>
+<pre class=" language-cmd"><code class="language-cmd">npm run dev
+</code></pre>
+<p><strong>2 代码开发部分</strong></p>
+<p><strong>2-1 简单理解目录</strong></p>
+<p>(1)文件结构简单介绍之<code>src</code>【其它的建议自行查阅官方文档】</p>
+<p>(2)运行项目时会自动打开一个界面，是如何做到的?</p>
+<blockquote>
+<p>main.js—&gt;App.vue—&gt;在App.vue  打几个字试试—&gt;刷新页面 </p>
+</blockquote>
+<p><code>【夹在中间的界面是哪来的？】</code></p>
+<blockquote>
+<p>打开 components（组件）的helloworld.vue  打几个字试试—刷新页面</p>
+<p>发现helloworld里的东西是会替换到router-view 标签   router（路由）</p>
+</blockquote>
+<p>(3)如何做到的的呢？</p>
+<p>打开 <code>router/index.js</code> 发现这里面有一个routes的配置</p>
+<blockquote>
+<p>要点：<br>1 导入需要配置的组件 import<br>2 添加配置项 path,name,component（组件）</p>
+</blockquote>
+<p>这样组件就会自动替换 router-view 标签  </p>
+<p>(4)组件的代码文档结构<br>由 &lt;template&gt;  &lt;script&gt;  &lt;style&gt; 三部分组成</p>
+<p><strong>2-2 开发一个可以显示学校信息的页面</strong></p>
+<p>2-2-1 创建组件<br>    <code>components/school.vue</code>   做出简单的修改</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>school<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>2-2-2 配置路由<br>(1)<code>index.js</code>  中  </p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> School <span class="token keyword">from</span> <span class="token string">'@/components/school'</span>
+</code></pre>
+<p>(2)添加一个新routes</p>
+<pre class=" language-html"><code class="language-html">{
+    path: '/school',
+    name: 'School',
+    component: School
+}
+</code></pre>
+<p>(3) 在index.js 的routes:上面平行添加 </p>
+<pre class=" language-js"><code class="language-js">mode<span class="token punctuation">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>  <span class="token comment" spellcheck="true">//去掉url中的#</span>
+</code></pre>
+<p>(4) 打开浏览器访问<a target="_blank" rel="noopener" href="http://127.0.0.1:8080/school">http://127.0.0.1:8080/school</a><br>可以显示出  shool字说明成功</p>
+<p>2-2-3 与服务端交互</p>
+<p>(1)访问数据</p>
+<ol>
+<li><p>打开python服务器，测试之前接口[根据自己之前的路由名来测试]<br><a target="_blank" rel="noopener" href="http://127.0.0.1:8000/first">http://127.0.0.1:8000/first</a> 得到数据<br>保持服务端服务器打开状态</p>
+</li>
+<li><p>打开前端工程，在school组件中编写获取服务端数据</p>
+</li>
+</ol>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
 <span class="token keyword">import</span> Axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
 <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
-  data <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">return</span> <span class="token punctuation">{</span>
-      schools<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token comment" spellcheck="true">// 添加了一个获取数据的方法</span>
   methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     loadSchool <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">var</span> api <span class="token operator">=</span> <span class="token string">'http://127.0.0.1:8000/first'</span>
@@ -1009,6 +979,36 @@ vue create testapp
         <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
           console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Response<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
         <span class="token comment" spellcheck="true">//   this.schools = Response.data</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  mounted <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">loadSchool</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+</code></pre>
+<p>   3)请求对接<br>   报错：跨域问题<br>   <code>打开python服务端工程</code>，添加跨域支持<br>   打开<code>settings.py</code><br>    A. INSTALLED_APPS: ‘corsheaders’<br>    B. MIDDLEWARE：’corsheaders.middleware.CorsMiddleware’,<br>       必须第一项<br>    注释掉 ‘django.middleware.csrf.CsrfViewMiddleware’,<br>    C. CORS_ORIGIN_ALLOW_ALL = True  #解决跨域问题</p>
+<p>(2)解析数据<br>school.vue中</p>
+<pre class=" language-js"><code class="language-js"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+<span class="token keyword">import</span> Axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  data <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      schools<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    loadSchool <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> api <span class="token operator">=</span> <span class="token string">'http://127.0.0.1:8000/first'</span>
+      Axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>api<span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span>Response<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Response<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>schools <span class="token operator">=</span> Response<span class="token punctuation">.</span>data <span class="token comment" spellcheck="true">// 添加这个数据</span>
         <span class="token punctuation">}</span><span class="token punctuation">)</span>
         <span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
           console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span>
@@ -1031,7 +1031,10 @@ vue create testapp
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
 </code></pre>
 <ol start="3">
-<li>测试：可以看到数据，但是不友好<br> schools[0] …其它数据的显示演示</li>
+<li><p>测试：</p>
+<p> 打开浏览器访问<a target="_blank" rel="noopener" href="http://127.0.0.1:8080/school">http://127.0.0.1:8080/school</a></p>
+<p> 可以看到数据，但是不友好<br> schools[0] …其它数据的显示演示</p>
+</li>
 </ol>
 <p>3 让页面更美观<br>  前端UI框架—<code>ant-design-vue</code></p>
 <pre class=" language-cmd"><code class="language-cmd">cnpm install ant-design-vue --save
