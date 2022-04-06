@@ -468,21 +468,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-05
+                    2022-04-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4,698
+                    5,409
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    20 分
+                    23 分
                 </div>
                 
 
@@ -507,47 +507,77 @@
 <p>储备知识：Python，HTML，CSS，JavaScript等计算机基础知识</p>
 <p>web框架： 别人已经设定好的一个web网站模板，你学习它的规则，然后“填空”或“修改”成你自己需要的样子。</p>
 </blockquote>
+<h2 id="0-开始前的准备–环境检查及工具的下载"><a href="#0-开始前的准备–环境检查及工具的下载" class="headerlink" title="0 开始前的准备–环境检查及工具的下载"></a>0 开始前的准备–环境检查及工具的下载</h2><h3 id="0-1环境的检查-——-python-amp-pip"><a href="#0-1环境的检查-——-python-amp-pip" class="headerlink" title="0-1环境的检查  —— python&amp;pip"></a>0-1环境的检查  —— python&amp;pip</h3><p>报不是内部命令的错误时，自己检查环境变量的配置，下面以python和pip为例</p>
+<p>检查python是否安装成功，是否配置过环境变量，命令行运行如下命令</p>
+<pre class=" language-cmd"><code class="language-cmd">python -V      
+
+pip list
+</code></pre>
+<p>第一条出现一行python版本就算成功</p>
+<p>第二条出现一堆包的名字就算成功</p>
+<p>python不是内部命令解决方案<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/263000046">https://zhuanlan.zhihu.com/p/263000046</a></p>
+<p>其余问题自行百度，时刻牢记我们是面向百度编程小能手</p>
+<h3 id="0-2工具的下载"><a href="#0-2工具的下载" class="headerlink" title="0-2工具的下载"></a>0-2工具的下载</h3><p>文中出现的所有工具，工具包都有</p>
+<p>除专业版外，其余均可自行到官网下载</p>
+<p>工具包地址：<br>链接：<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/fb988374b279">https://pan.quark.cn/s/fb988374b279</a><br>提取码：p1Am</p>
+<h3 id="0-3文档的使用"><a href="#0-3文档的使用" class="headerlink" title="0-3文档的使用"></a>0-3文档的使用</h3><p>使用文档的过程中不知道是代码还是命令时，如果是在博客中则是黑框右上角，如果是打开的Markdown文档则是点击后在右下角，如cmd则是在cmd中输入命令，如python则是Python代码，需要在对应的位置进行代码的修改。</p>
 <h2 id="第一部分：Python-Web-框架——django"><a href="#第一部分：Python-Web-框架——django" class="headerlink" title="第一部分：Python Web 框架——django"></a>第一部分：Python Web 框架——django</h2><blockquote>
 <p>Django是高水准的Python编程语言驱动的一个开源模型．视图，控制器风格的Web应用程序框架，它起源于开源社区。使用这种架构，程序员可以方便、快捷地创建高品质、易维护、数据库驱动的应用程序。这也正是OpenStack的Horizon组件采用这种架构进行设计的主要原因。另外，在Django框架中，还包含许多功能强大的第三方插件，使得Django具有较强的可扩展性。</p>
 <p>Django将MVC中的视图进一步分解为 Django视图 和 Django模板两个部分，分别决定 “展现哪些数据” 和 “如何展现”，使得Django的模板可以根据需要随时替换，而不仅仅限制于内置的模板。框架把控制层给封装了，无非与数据交互这层都是数据库表的读,写,删除,更新的操作。在写程序的时候，只要调用相应的方法就行了</p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27717315">https://zhuanlan.zhihu.com/p/27717315</a> 简单理解什么是MVC</p>
 </blockquote>
-<p>工具包地址：<br>链接：<a target="_blank" rel="noopener" href="https://pan.quark.cn/s/fb988374b279">https://pan.quark.cn/s/fb988374b279</a><br>提取码：p1Am</p>
-<h3 id="一、django及其附属工具安装"><a href="#一、django及其附属工具安装" class="headerlink" title="一、django及其附属工具安装"></a>一、django及其附属工具安装</h3><p>1- 安装**<code>django</code>**开发环境（python3.7+django2.0）</p>
-<pre class=" language-cmd"><code class="language-cmd">pip install django==2.0
+<h3 id="一、django及其附属工具安装"><a href="#一、django及其附属工具安装" class="headerlink" title="一、django及其附属工具安装"></a>一、django及其附属工具安装</h3><p>1- 安装<code>django</code>开发环境及其依赖（python3.7+django2.0）——————pip命令安装</p>
+<p>windows使用命令行提示符，max使用终端</p>
+<pre class=" language-cmd"><code class="language-cmd"># 安装django————————————django框架的核心模块
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple   django==2.0 
+
+# 安装pymysql———————————python来操作mysql数据库的模块
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple   pymysql 
+
+# 安装restframework  markdown django-filter依赖:
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple   djangorestframework markdown Django-filter 
+
+# 安装跨域支持   
+pip  install  -i https://pypi.tuna.tsinghua.edu.cn/simple   Django-cors-headers 
 </code></pre>
 <blockquote>
 <p>版本最好保持一致，追求刺激可以自选版本</p>
 <p>多个python版本注意修改环境变量</p>
 <p>安装后续django依赖模块时，会自动更新到适合的版本，如果另后续出现问题可自行百度</p>
 </blockquote>
-<p>2- 安装**<code>pycharm</code>**</p>
-<p><a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a></p>
+<p>2- 安装<code>pycharm</code>————也可以安装别的能看python代码的软件</p>
+<p>安装pycharm方式二选一：工具包&amp;官网</p>
+<blockquote>
+<p>工具包对应文件：pycharm文件夹中的 <code>pycharm-community-2019.3.exe</code></p>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a>         </p>
+</blockquote>
 <p>pycharm只是一个看代码的工具，专业版需要使用科技手段，有条件请支持正版，没条件社区版同样够用</p>
-<p>3-1 安装**<code>mysql</code>**数据库</p>
+<p>建议安装notepad++用来看代码，工具包中文件名     <code>npp.7.8.8.Installer.x64.exe</code></p>
+<p>3-安装<code>mysql</code>数据库及其可视化工具</p>
+<p>3-1 mysql服务的安装</p>
 <p><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a></p>
 <p>下载并安装mysql5.7.31——工具包内有，注意版本保持一致</p>
 <p>安装教程：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zixiao_love/article/details/100118585">https://blog.csdn.net/zixiao_love/article/details/100118585</a></p>
 <blockquote>
 <p>注：在设置密码时一定要谨慎，不想找trouble，就直接123456</p>
 </blockquote>
-<p>3-2 安装数据库客户端 **<code>Navicat Premium 15</code>**，需科技手段</p>
-<p>3-3 安装 **<code>pymysql</code>**——cmd中操作<br>这是python来操作mysql数据库的</p>
-<pre class=" language-cmd"><code class="language-cmd">pip install pymysql
-</code></pre>
-<p>4- 安装 <strong><code>restframework</code></strong>  **<code>markdowndjango-filte</code>**依赖:</p>
-<p>主要适用于前后端分离项目</p>
-<pre class=" language-cmd"><code class="language-cmd">pip install djangorestframework markdown Django-filter
-</code></pre>
-<p>5-  安装跨域支持 <strong><code>Django-cors-headers</code></strong></p>
-<pre class=" language-cmd"><code class="language-cmd">pip  install  Django-cors-headers
-</code></pre>
-<p>6- 开发接口测试 <strong><code>Postman</code></strong><br>    下载：<a target="_blank" rel="noopener" href="https://www.postman.com/downloads/">https://www.postman.com/downloads/</a></p>
-<p>7- 测试django是否合格</p>
-<p>7-1 在D盘创建一个英文目录Test，并在cmd中进入当前的路径，创建一个工程项目Test_django</p>
+<p>3-2 安装数据库客户端<code>Navicat Premium 15</code>，需科技手段</p>
+<p>安装教程：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1804255">https://cloud.tencent.com/developer/article/1804255</a></p>
+<p>一定要注意在安装完软件本体后，不要打开软件，要打开注册机，然后再照着教程操作</p>
+<p>注册完成后，在左上角找到帮助，选择帮助选项中的关于，看是否注册成功</p>
+<p>3-3 检查<code>pymysql</code>——cmd黑窗口中操作<br>这是python来操作mysql数据库的</p>
+<p>4- 开发接口测试 <code>Postman</code>————可选，教程中用的少，用来测试接口传输的数据<br>    下载：<a target="_blank" rel="noopener" href="https://www.postman.com/downloads/">https://www.postman.com/downloads/</a></p>
+<p>到这里django需要的环境基本配置完成，我们可以测试一下是否完全成功</p>
+<p>5-测试django是否合格</p>
+<p>5-1 在某个你喜欢的盘你喜欢的位置创建一个英文目录（也就是创建一个文件夹名）叫Test，并在cmd中进入当前的路径，创建一个工程项目Test_django</p>
 <pre class=" language-cmd"><code class="language-cmd">django-admin startproject Test_django
 </code></pre>
-<p>7-2 更改时区和语言<br>  在 <strong>Test_django</strong>的<code>settings.py</code><br>  下面是两者任选一个，根据你的操作系统而定</p>
+<p>这里进入当前目录可以选择直接在当前目录的 地址栏 输入  cmd  ，然后回车即可打开当前目录的cmd</p>
+<p>或者在常规打开命令行后使用    cd  完整路径     ，进入对应目录</p>
+<p>5-2 更改时区和语言</p>
+<p> 在 <strong>Test_django</strong>的<code>settings.py</code>找到下面的两个变量，并修改对应值</p>
+<p>打开方式推荐右键选择打开方式为notepad++，快</p>
+<p>  下面是两者任选一个，根据你的操作系统而定</p>
 <pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># window系统</span>
 LANGUAGE_CODE <span class="token operator">=</span> <span class="token string">'zh-hans'</span>
 
@@ -558,8 +588,11 @@ LANGUAGE_CODE <span class="token operator">=</span> <span class="token string">'
 
 TIME_ZONE <span class="token operator">=</span> <span class="token string">'Asia/Shanghai'</span>
 </code></pre>
-<p>7-3 在命令行中，进入工程目录Test_django，启动WEB服务</p>
-<pre class=" language-cmd"><code class="language-cmd">cd Test_django
+<p>5-3 在命令行中，进入工程目录Test_django，启动WEB服务</p>
+<pre class=" language-cmd"><code class="language-cmd"># 是一行一行输入
+# 一定要先进到文件夹里再输入、
+# 提示找不到对应文件时检查目录
+cd Test_django
 
 python manage.py runserver
 </code></pre>
@@ -568,7 +601,7 @@ python manage.py runserver
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 </code></pre>
-<p>7-4 浏览器测试<br>   打开一个浏览器，在地址框里录入:<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a><br>    可以打开一个python Django的网页说明配置成功</p>
+<p>5-4 浏览器测试<br>   打开一个浏览器，在地址框里录入:<a target="_blank" rel="noopener" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a><br>    可以打开一个python Django的网页说明配置成功</p>
 <h3 id="二、django工程开发流程"><a href="#二、django工程开发流程" class="headerlink" title="二、django工程开发流程"></a>二、django工程开发流程</h3><p><strong>0 在合适的位置创建新文件夹django_stu,并使用pycharm打开此文件夹</strong>————如果设置虚拟环境，需要提前配置好虚拟环境的Python编译器</p>
 <p><strong>1 创建一个名为<em>StudSys</em>工程项目</strong><br>   在pycharm左下角Terminal工具 执行下面的指令：</p>
 <pre class=" language-cmd"><code class="language-cmd">django-admin  startproject  StudSys
@@ -1648,7 +1681,7 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.9k</span>&nbsp;字
+                class="white-color">11.6k</span>&nbsp;字
             
             
             
