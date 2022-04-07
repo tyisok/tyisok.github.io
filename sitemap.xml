@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://tyisok.github.io/2022/04/07/djangovue-jin-jie/</loc>
+    
+    <lastmod>2022-04-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tyisok.github.io/2022/01/15/xu-ni-xian-shi-ji-zhu/</loc>
     
     <lastmod>2021-06-07</lastmod>
@@ -119,6 +128,20 @@
 
   
   <url>
+    <loc>https://tyisok.github.io/tags/Django/</loc>
+    <lastmod>2022-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tyisok.github.io/tags/Vue/</loc>
+    <lastmod>2022-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://tyisok.github.io/tags/HFSS/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -134,20 +157,6 @@
   
   <url>
     <loc>https://tyisok.github.io/tags/%E7%8C%9B%E7%8C%9B%E5%AD%A6/</loc>
-    <lastmod>2022-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://tyisok.github.io/tags/Django/</loc>
-    <lastmod>2022-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://tyisok.github.io/tags/Vue/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -170,6 +179,13 @@
 
   
   <url>
+    <loc>https://tyisok.github.io/categories/Web%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2022-04-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://tyisok.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -178,13 +194,6 @@
   
   <url>
     <loc>https://tyisok.github.io/categories/%E5%B0%B1%E6%98%AF%E5%AD%A6-%E7%8C%9B%E7%8C%9B%E5%AD%A6/</loc>
-    <lastmod>2022-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://tyisok.github.io/categories/Web%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2022-04-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

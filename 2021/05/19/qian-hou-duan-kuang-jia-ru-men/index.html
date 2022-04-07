@@ -475,7 +475,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5,416
+                    5,448
                 </div>
                 
 
@@ -681,7 +681,8 @@ Quit the server with CONTROL-C.
 </blockquote>
 <p><strong>10 打开Postman 测试接口</strong><br>      如果没有安装可以使用浏览器测试<br>      <a target="_blank" rel="noopener" href="http://127.0.0.1:8000/first">http://127.0.0.1:8000/first</a><br>      如果得到helloworld输出证明已经测试通过</p>
 <p>你的第一个网络服务接口  通过测试   可以继续</p>
-<p><strong>11 配置数据库  <code>setting.py</code></strong><br>     ==DATABASES==<br>   　默认为sqlite3，更改为mysql时，需注意版本，<br>     如果为Django2.1版本以上，mysql版本必须为5.6以上<br>     两种方案：1.降低Django版本，2.升级mysql<br>例：</p>
+<p>这里后续修改配置时，不要让django持续运行，停止运行后再修改</p>
+<p><strong>11 配置数据库  <code>setting.py</code></strong><br>     ==DATABASES==<br>   　默认为sqlite3，更改为mysql时，需注意版本，<br>     如果为Django2.1版本以上，mysql版本必须为5.6以上<br>例：</p>
 <pre class=" language-python"><code class="language-python">DATABASES <span class="token operator">=</span> <span class="token punctuation">{</span>
     <span class="token string">'default'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
         <span class="token string">'ENGINE'</span><span class="token punctuation">:</span> <span class="token string">'django.db.backends.mysql'</span><span class="token punctuation">,</span>
@@ -693,17 +694,19 @@ Quit the server with CONTROL-C.
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><code>记得启动 mysql服务</code><br>如果报了mysql版本问题，<br>或是报Did you install mysqlclient?错误<br>需要在与<code>setting.py</code>同目录的<code>__init__.py</code>中添加</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pymysql
-pymysql<span class="token punctuation">.</span>version_info <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token string">"final"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
-pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<p><strong>12 创建数据库</strong><br>    打开mysql客户端，创建相应的数据库( 名必须是上面配置中的名一致)</p>
+<p><strong>12 创建数据库</strong><br><code>记得启动 mysql服务</code><br>    打开mysql客户端，创建相应的数据库( 名必须是上面配置中的名一致)</p>
 <p><strong>13  执行数据更新命令</strong><br>       执行数据库迁移</p>
 <pre class=" language-cmd"><code class="language-cmd">python manage.py makemigrations
 python manage.py migrate
 </code></pre>
 <p>发现已经自动为我们创建了一些django的表</p>
+<p>注：</p>
+<p>如果在迁移的时候报了mysql版本问题，<br>或是报<code>Did you install mysqlclient?</code>错误<br>需要在与<code>setting.py</code>同目录的<code>__init__.py</code>中添加</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pymysql
+pymysql<span class="token punctuation">.</span>version_info <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">,</span> <span class="token string">"final"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+pymysql<span class="token punctuation">.</span>install_as_MySQLdb<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>这里还可能会报<code>AttributeError: ‘str‘ object has no attribute &#39;decode‘</code></p>
 <p><strong>14 在<code>[app名称]/models.py</code>中添加表的model</strong><br>      注意：每次添加新model后，执行13代码</p>
 <ol>
 <li>添加model</li>
@@ -1681,7 +1684,7 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.6k</span>&nbsp;字
+                class="white-color">11.7k</span>&nbsp;字
             
             
             
