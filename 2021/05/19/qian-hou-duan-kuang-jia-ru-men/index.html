@@ -468,14 +468,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-06
+                    2022-04-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5,412
+                    5,416
                 </div>
                 
 
@@ -527,7 +527,7 @@ pip list
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/27717315">https://zhuanlan.zhihu.com/p/27717315</a> 简单理解什么是MVC</p>
 </blockquote>
 <h3 id="一、django及其附属工具安装"><a href="#一、django及其附属工具安装" class="headerlink" title="一、django及其附属工具安装"></a>一、django及其附属工具安装</h3><p>1- 安装<code>django</code>开发环境及其依赖（python3.7+django2.2）——————pip命令安装</p>
-<p>windows使用命令行提示符，max使用终端</p>
+<p>windows使用命令行提示符，mac使用终端</p>
 <pre class=" language-cmd"><code class="language-cmd"># 安装django————————————django框架的核心模块
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple   django==2.2 
 
@@ -850,16 +850,16 @@ urlpatterns <span class="token operator">=</span> <span class="token punctuation
 </code></pre>
 <p>5 设置环境变量 使得在任意目录下都可以使用cnpm、vue等命令，而不需要输入全路径<br>     修改 系统变量 PATH，添加新的全局路径 <code>完整路径\node_global</code><br>     新增 系统变量 NODE_PATH  <code>完整路径\node_modules</code></p>
 </blockquote>
-<p>2-1安装==淘宝镜像==</p>
+<p>2-1安装淘宝镜像————注意命令行权限</p>
 <pre class=" language-cmd"><code class="language-cmd">npm install -g cnpm --registry=HTTPS://registry.npm.taobao.org
 </code></pre>
-<p>2-2 安装==vue.js==</p>
+<p>2-2 安装<code>vue.js</code></p>
 <pre class=" language-cmd"><code class="language-cmd">mac:   
 cnpm install -global vue-cli
 win:   
 cnpm install vue-cli -g
 </code></pre>
-<p>2-3安装==Visual Studio Code==</p>
+<p>2-3安装<code>Visual Studio Code</code></p>
 <p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/">vscode下载地址</a></p>
 <blockquote>
 <p>添加对vue支持的插件</p>
@@ -868,11 +868,8 @@ cnpm install vue-cli -g
 <p>3-测试是否安装成功<br>【创建并进入测试目录Test_Vue中】<br>3-1在命令行创建前端测试工程项目—testapp</p>
 <pre class=" language-cmd"><code class="language-cmd"># 标准格式
 # vue init webpack [项目名]
-# 例：
+
 vue init webpack testapp
-# 或 3.0以上 s
-# vue create [项目名]
-vue create testapp
 </code></pre>
 <p>3-2安装router—新的版本可能会提供自动提示安装（一路猛回车即可）</p>
 <pre class=" language-cmd"><code class="language-cmd">cnpm i vue-router -D
@@ -1070,7 +1067,7 @@ vue create testapp
 </li>
 </ol>
 <p>3 让页面更美观<br>  前端UI框架—<code>ant-design-vue</code></p>
-<pre class=" language-cmd"><code class="language-cmd">cnpm install ant-design-vue --save
+<pre class=" language-cmd"><code class="language-cmd">cnpm install ant-design-vue@1.7.8 --save
 </code></pre>
 <p>见文档中的导入说明</p>
 <p><a target="_blank" rel="noopener" href="https://www.antdv.com/docs/vue/getting-started-cn/">ant-design-vuegu官网</a></p>
@@ -1141,6 +1138,9 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+</code></pre>
+<p>6 再次运行项目</p>
+<pre class=" language-cmd"><code class="language-cmd">npm run dev
 </code></pre>
 
                 
