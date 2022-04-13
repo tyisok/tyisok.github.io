@@ -1,4 +1,4 @@
-https://tyisok.github.io/2022/04/13/jdbc-xue-xi/
+https://tyisok.github.io/2022/04/13/jdbc/
 https://tyisok.github.io/2021/05/19/qian-hou-duan-kuang-jia-ru-men/
 https://tyisok.github.io/2022/04/07/djangovue-jin-jie/
 https://tyisok.github.io/2022/01/15/xu-ni-xian-shi-ji-zhu/
