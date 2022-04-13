@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://tyisok.github.io/2022/04/13/jdbc-xue-xi/</loc>
+    
+    <lastmod>2022-04-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://tyisok.github.io/2021/05/19/qian-hou-duan-kuang-jia-ru-men/</loc>
     
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -121,7 +130,7 @@
 
   <url>
     <loc>https://tyisok.github.io/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -129,49 +138,63 @@
   
   <url>
     <loc>https://tyisok.github.io/tags/Django/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://tyisok.github.io/tags/Vue/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://tyisok.github.io/tags/HFSS/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tyisok.github.io/tags/Java/</loc>
+    <lastmod>2022-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tyisok.github.io/tags/JDBC/</loc>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://tyisok.github.io/tags/%E5%B0%B1%E6%98%AF%E5%AD%A6/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://tyisok.github.io/tags/%E7%8C%9B%E7%8C%9B%E5%AD%A6/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://tyisok.github.io/tags/Learn/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://tyisok.github.io/tags/Tools/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -180,28 +203,28 @@
   
   <url>
     <loc>https://tyisok.github.io/categories/Web%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://tyisok.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2022-04-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://tyisok.github.io/categories/%E5%B0%B1%E6%98%AF%E5%AD%A6-%E7%8C%9B%E7%8C%9B%E5%AD%A6/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://tyisok.github.io/categories/Personal-use/</loc>
-    <lastmod>2022-04-08</lastmod>
+    <lastmod>2022-04-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://tyisok.github.io/categories/%E5%B0%B1%E6%98%AF%E5%AD%A6-%E7%8C%9B%E7%8C%9B%E5%AD%A6/</loc>
+    <lastmod>2022-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

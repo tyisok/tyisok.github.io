@@ -1,3 +1,4 @@
+https://tyisok.github.io/2022/04/13/jdbc-xue-xi/
 https://tyisok.github.io/2021/05/19/qian-hou-duan-kuang-jia-ru-men/
 https://tyisok.github.io/2022/04/07/djangovue-jin-jie/
 https://tyisok.github.io/2022/01/15/xu-ni-xian-shi-ji-zhu/
@@ -15,11 +16,13 @@ https://tyisok.github.io/
 https://tyisok.github.io/tags/Django/
 https://tyisok.github.io/tags/Vue/
 https://tyisok.github.io/tags/HFSS/
+https://tyisok.github.io/tags/Java/
+https://tyisok.github.io/tags/JDBC/
 https://tyisok.github.io/tags/%E5%B0%B1%E6%98%AF%E5%AD%A6/
 https://tyisok.github.io/tags/%E7%8C%9B%E7%8C%9B%E5%AD%A6/
 https://tyisok.github.io/tags/Learn/
 https://tyisok.github.io/tags/Tools/
 https://tyisok.github.io/categories/Web%E5%BC%80%E5%8F%91/
 https://tyisok.github.io/categories/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E5%85%B7/
-https://tyisok.github.io/categories/%E5%B0%B1%E6%98%AF%E5%AD%A6-%E7%8C%9B%E7%8C%9B%E5%AD%A6/
 https://tyisok.github.io/categories/Personal-use/
+https://tyisok.github.io/categories/%E5%B0%B1%E6%98%AF%E5%AD%A6-%E7%8C%9B%E7%8C%9B%E5%AD%A6/
