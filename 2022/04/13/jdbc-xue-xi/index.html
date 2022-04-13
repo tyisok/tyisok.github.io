@@ -556,7 +556,7 @@ rs<span class="token operator">=</span>pst<span class="token punctuation">.</spa
 <h1 id="jdbc学习（转自网络）"><a href="#jdbc学习（转自网络）" class="headerlink" title="jdbc学习（转自网络）"></a>jdbc学习（转自网络）</h1><p>JDBC（Java DataBase Connectivity）就是Java数据库连接</p>
 <h3 id="1-什么是JDBC"><a href="#1-什么是JDBC" class="headerlink" title="1 什么是JDBC"></a>1 什么是JDBC</h3><p> JDBC（Java DataBase Connectivity）就是Java数据库连接，说白了就是用Java语言来操作数据库。原来我们操作数据库是在控制台使用SQL语句来操作数据库，JDBC是用Java语言向数据库发送SQL语句。</p>
 <h3 id="2-JDBC原理"><a href="#2-JDBC原理" class="headerlink" title="2 JDBC原理"></a>2 JDBC原理</h3><p>早期SUN公司的天才们想编写一套可以连接天下所有数据库的API，但是当他们刚刚开始时就发现这是不可完成的任务，因为各个厂商的数据库服务器差异太大了。后来SUN开始与数据库厂商们讨论，最终得出的结论是，由SUN提供一套访问数据库的规范（就是一组接口），并提供连接数据库的协议标准，然后各个数据库厂商会遵循SUN的规范提供一套访问自己公司的数据库服务器的API出现。SUN提供的规范命名为JDBC，而各个厂商提供的，遵循了JDBC规范的，可以访问自己数据库的API被称之为驱动！</p>
-<p><img src=".%5CJDBC.assets%5C1196212-20180107113045534-1418003046.png" alt="img"></p>
+<p><img src="JDBC%E5%AD%A6%E4%B9%A0/1196212-20180107113045534-1418003046.png" alt="img"></p>
 <p>JDBC是接口，而JDBC驱动才是接口的实现，没有驱动无法完成数据库连接！每个数据库厂商都有自己的驱动，用来连接自己公司的数据库。</p>
 <p>当然还有第三方公司专门为某一数据库提供驱动，这样的驱动往往不是开源免费的！</p>
 <h3 id="3-JDBC核心类（接口）介绍"><a href="#3-JDBC核心类（接口）介绍" class="headerlink" title="3 JDBC核心类（接口）介绍"></a>3 JDBC核心类（接口）介绍</h3><p>JDBC中的核心类有：DriverManager、Connection、Statement，和ResultSet！</p>
